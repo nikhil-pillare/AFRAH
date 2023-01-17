@@ -34,37 +34,289 @@
         }
         #search-bar{
             display: flex;
-            justify-content: space-between;
+            
             align-items: center;
             height: 55px;
-            border: 2px solid black;
-            background-color: rgb(45,45,45);
+            
+           background-color: rgb(0, 0, 0);
+           padding-right: 47px;
+           
+        }
+        #search-bar>a:hover{
+            
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(49, 47, 47);
+
         }
         #search-bar>a{
             color: white;
-            font-weight: bolder;
+            display: flex;
             font-family: futura-pt, sans-serif;
+            text-decoration: none;
+            color: rgb(239, 236, 232);
+            width: 10%;
+            
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid rgb(49, 47, 47);
+            border-left: 1px solid rgb(49, 47, 47);
+           
         }
         #search-bar>input{
             width: 54%;
             border-radius: 20px;
             height: 60%;
+            font-size: 15px;
+            border: none;
+            margin-left: 27px;
+            margin-right: 15px;
         }
         #search-bar>img{
             height: 50%;
-            border: 2px solid yellow;
+            margin-left: 19px;
+           
             
         }
-        #search-bar>h1{
-            font-size: 30px;
-            font-weight: bolder;
-            color: white;
-            margin-left: 15px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        #search-bar>img:nth-child(1){
+            height: 100%;
+            margin-left: 20px;
+            width: 10%;
+           
         }
-
+       
+        #nav{
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(49, 47, 47);
+            padding-left: 60px;
+            padding-right: 200px;
+        }
+        #nav>a{
+            color: white;
+            text-decoration: none;
+            font-family: futura-pt, sans-serif;
+            font-size: 14px;
+        }
+       #coupen{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       }
+       #coupen>a:nth-child(1){
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        text-decoration: none;
+        background-color: rgb(222, 138, 166);
+        color: black;
+        font-family: futura-pt, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+       }
+       #coupen>a:nth-child(2){
+        width: 50%;
+        text-align: center;
+        text-decoration: none;
+        background-color: rgb(196, 255, 60);
+        color: black;
+        font-family: futura-pt, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        height: 100%;
+        
+       }
+       #sale{
+        width: 100%;
+        height: 150px;
+        background-color: palevioletred;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: futura-pt, sans-serif;
+        border-top: 2px solid white;
+        background-image: linear-gradient(to right,rgb(255,59,95) ,rgb(246,149,180));
+       }
+       #sale>h1,h5{
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 11px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        
+       }
+       #sale>p{
+        margin-top: 6px;
+        margin-bottom: 0px;
+       }
+      #mod{
+        width: 96%;
+        height: 550px;
+        margin-top: 30px;
+        display: block;
+        text-align: center;
+        
+        margin-left: 2%;
+      }
+      #mod>img{
+        width: 100%;
+        height: 100%;
+        
+      }
+      #grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 26px;
+        width: 96%;
+       
+       margin-top: 50px;
+       text-align: center;
+      justify-content: center;
+      margin-left: 2%;
+      font-family: futura-pt, sans-serif;
+      
+      }
+      #grid>div>img{
+        width: 100%;
+        
+      }
+      #minisale{
+        width: 100%;
+        height: 120px;
+        background-color: rgb(156,240,224);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: futura-pt, sans-serif;
+        margin-top: 50px;
+        
+       
+       }
+       #minisale>h1,h5{
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 11px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        
+       }
+       #minisale>p{
+        margin-top: 6px;
+        margin-bottom: 0px;
+       }
+       #slider{
+        width: 100%;
+        height: 700px;
+        background-color: rgb(156,240,224);
+        display: flex;
+        flex-direction: column;
+       
+        margin-top: 50px;
+        align-items: center;
         
 
+       }
+       #slider>h4{
+        font-size: 25px;
+        margin-bottom: 2px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       } 
+       #slider>p{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       #slider>img{
+        width: 80%;
+        height: 50%;
+        margin-bottom: 90px;
+        margin-top: 30px;
+       }
+       #slider>button{
+        width: 170px;
+        height: 40px;
+        background-color: white;
+        border: none;
+        font-weight: bold;
+        font-size: 20px;
+
+       }
+       #models{
+        width: 90%;
+        margin-left: 5%;
+        display: flex;
+        margin-top: 48px;
+        
+        justify-content: space-between;
+       }
+       #models>div{
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 48%;
+       }
+       #models>div>img{
+        width: 90%;
+        border-top: 11px solid rgb(115, 59, 176);
+        border-left: 11px solid rgb(225, 47, 47);
+        border-right: 11px solid rgb(193, 255, 47);
+        border-bottom: 11px solid palevioletred;
+       }
+       #models>div>button{
+        width: 150px;
+        height: 40px;
+        background-color: white;
+       }
+       #premier{
+        width: 100%;
+        height: 140px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: futura-pt, sans-serif;
+        background-image: linear-gradient(  to right, rgb(144, 49, 228),rgb(71, 227, 110),rgb(236, 43, 117),rgb(77, 224, 224),rgb(143, 95, 220),rgb(215, 25, 139),rgb(255, 255, 10));
+        
+       }
+       #premier>h1,h5{
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 11px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 20px;
+        
+       }
+       #premier>p{
+        margin-top: 6px;
+        margin-bottom: 0px;
+        font-size: 12px;
+       }
+       #brands{
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        margin-top: 50px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       }
+      
+       #brandimg{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        width: 90%;
+        margin-left: 5%;
+        
+       }
+       #brandimg>img{
+        width: 100%;
+       }
     </style>
 </head>
 <body>
@@ -74,16 +326,122 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" alt="USAFlag">
     </div>
     <div id="search-bar">
-       <h1>asos</h1>
+       <img src="afrah.png" alt="logo">
         <a href="">WOMAN</a>
         <a href="">MEN</a>
-        <input type="text" placeholder="search for items and brands">
-        <img src="https://img1.pnghut.com/25/25/24/CYFkxxn25j/human-icon-avatar-person-white-profile.jpg" alt="">
-        <img src="https://www.clipartmax.com/png/middle/170-1706757_heart-valentine-shaped-mousepad-heart-icon-png-white.png" alt="">
-        <img src="https://thumbnail.imgbin.com/22/1/2/shopping-icon-shopping-bag-icon-bag-icon-6r7nGaXH_t.jpg" alt="">
+        <input type="text" placeholder="     search for items and brands">
+        <img src="profile.png" alt="">
+        <img src="heart.png" alt="">
+        <img src="shoping bag.png" alt="">
 
     </div>
-    <div></div>
+    <div id="nav">
+          <a href="">Sale</a>
+          <a href="">New in</a>
+          <a href="">Clothing</a>
+          <a href="">Dresses</a>
+          <a href="">Plus size</a>
+          <a href="">Shoes</a>
+          <a href="">Activewear</a>
+          <a href="">Brands</a>
+          <a href="">Accessories</a>
+          <a href="">Winter</a>
+          <a href="">Face + Body</a>
+          <a href="">Topshop</a>
+          <a href="">Outlet</a>
+          <a href="">Marketplace</a>
+    </div>
+    <div id="coupen">
+        <a href="">25% OFF WINTER WARMERS!* <br> BRRRRRRRRR <br>
+            With code: WARMUP
+        </a>
+        <a href="">STUDENTS: TAKE 15% OFF WITH YOUR CODE!* <br> (LIMITED TIME ONLY) <br> GET YOUR CODE</a>
+    </div>
+   <div id="sale">
+        <h1>
+            25% OFF WINTER WARMERS!* <br> BRRRRRRRRR
+        </h1>
+        <h5>
+            With code: WARMUP
+        </h5>
+        <P>see website for full T&Cs. Selected market products excluded from promo</P>
+   </div>
+   <div id="mod">
+    <img src="https://digiday.com/wp-content/uploads/sites/3/2017/10/170810_ASOS_shot_15_507.jpg?resize=1030,579" alt="">
+   </div>
+   <div id="grid">
+         <div>
+        <img src="https://content.asos-media.com/-/media/homepages/ww/2023/january/16-prime/moment/ww/ww_global_valentines_date_night_moment_870x1110.jpg" alt="">
+        <h3>DATE NIGHT</h3>
+        <P>We're falling for these</P>
+         </div>
+         <div>
+            <img src="https://content.asos-media.com/-/media/homepages/ww/2023/january/16-prime/moment/ww/ww_global_asos_design_brighter_days_moment_870x1110.jpg" alt="">
+            <h3>DO THE BRIGHT THING</h3>
+            <p>Grape vibes</p>
+         </div>
+         <div>
+            <img src="https://content.asos-media.com/-/media/homepages/ww/2023/january/16-prime/moment/ww/ww_global_asos_edition_brights_moment_870x1110.jpg" alt="">
+            <h3>COLOUR QUEENS</h3>
+            <P>AFRAH EDITION statements</P>
+         </div>
+         <div>
+            <img src="https://content.asos-media.com/-/media/homepages/ww/2023/january/16-prime/moment/ww/ww_global_too_faced_better_than_sex_chocolate_moment_870x1110.jpg" alt="">
+            <h3>TOO FACED NEWNESS</h3>
+            <P>Chocolate Sold</P>
+         </div>
+   </div>
+   <div id="minisale">
+    <h1>
+        UP TO 30% OFF FRESH FAVES!
+    </h1>
+    <h5>
+        INCL. DRESSES, TOPS, SHOES & MORE
+    </h5>
+    <P>Limited time only. Selected styles marked down as shown</P>
+</div>
+<div id="slider">
+      <h4>STYLE FEED</h4>
+      <P>Outfit ideas, editor picks, styling inspiration and Face + Body tips</P>
+      <img src="https://content.asos-media.com/-/media/images/articles/women/2023/01/17-tues/thumb_230111165724.jpg?h=300&w=300&hash=0CDB88EF65E91183AB55449764DEE08B" alt="">
+      <button>VIEW ALL</button>
+</div>
+<div id="models">
+       <div>
+        <img src="https://images.vs-static.com/QfG8MzDo_PcOpesmigg1wMU_INE=/627x0:2374x2329/1900x0/Zalando_0307_Edit_d14867ffa4/Zalando_0307_Edit_d14867ffa4.jpg" alt="">
+        <h2>AFRAH WEEKEND COLLECTIVE</h2>
+        <P>Our kinda club</P>
+        <button>Shop The Brand</button>
+       </div>
+       <div>
+        <img src="https://images.vs-static.com/QfG8MzDo_PcOpesmigg1wMU_INE=/627x0:2374x2329/1900x0/Zalando_0307_Edit_d14867ffa4/Zalando_0307_Edit_d14867ffa4.jpg" alt="">
+        <h2>RECLAIMED VINTAGE</h2>
+        <P>Matchy-matchy moments</P>
+        <button>Shop The Brand</button>
+       </div>
+       
+</div>
+<div id="premier">
     
+        <h1>
+           AFRAH PREMIER
+        </h1>
+        <h5>
+            Unlimited free Next Day Delivery for a whole year for $11.95
+        </h5>
+        <P>Minimum spend and Ts&Cs apply.</P>
+    
+</div>
+<div id="brands">
+    <h2>TRENDING BRANDS</h2>
+    <div id="brandimg">
+        <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/asos-design-logo_256_v4.png" alt="">
+        <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/adidas-hp-logos-256x256.jpg" alt="">
+        <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/1x12x---test.png" alt="">
+        <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/north-face.png" alt="">
+        <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/collusion-hp-logos-256x256.jpg" alt="">
+        <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/stradivarius.png" alt="">
+    </div>
+</div>
 </body>
 </html>
