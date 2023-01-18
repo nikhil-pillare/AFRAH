@@ -156,6 +156,7 @@
        #sale>p{
         margin-top: 6px;
         margin-bottom: 0px;
+        color: rgb(73, 73, 73);
        }
       #mod{
         width: 96%;
@@ -188,6 +189,10 @@
         width: 100%;
         
       }
+      #grid>div>p{
+        text-align: center;
+      }
+     
       #minisale{
         width: 100%;
         height: 120px;
@@ -271,7 +276,14 @@
        #models>div>button{
         width: 150px;
         height: 40px;
+        font-size: 14px;
         background-color: white;
+       }
+       #models>div>p{
+        text-align: center;
+        color: rgb(109, 109, 109);
+        font-weight: 600;
+        font-size: 16px;
        }
        #premier{
         width: 100%;
@@ -317,6 +329,129 @@
        #brandimg>img{
         width: 100%;
        }
+       #categories{
+        width: 100%;
+        height: 300px;
+        margin-top: 80px;
+        
+        margin-bottom: 50px;
+       
+       }
+       #categories>div{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 90%;
+        height: 80%;
+       
+        margin: auto;
+        
+
+       }
+       #categories>h2{
+        text-align: center;
+        font-size: 27px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+       }
+       #categories>div>a{
+        text-decoration: none;
+        font-size: 15px;
+        text-align: left;
+        color: grey;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       #desc{
+        margin-top: 80px;
+        width: 50%;
+        margin: auto;
+        
+        height: 300px;
+        margin-bottom: 40px;
+       }
+       #desc>p{
+        text-align: center;
+       line-height: 1.5;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       color: rgb(105, 105, 105);
+       }
+       #partners{
+               margin-top: 100px;
+               width: 80%;
+               height: 55px; 
+               display: flex; 
+               margin: auto;
+              
+       }
+       #social{
+        width: 22%;
+        border-right: 2px solid rgb(189, 189, 189);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+       }
+       #social>img{
+        height: 60%;
+       }
+       #pay{
+        width: 78%;
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       }
+       #pay>img{
+        height: 60%;
+       }
+       #footer{
+        width: 100%;
+        height: 370px;
+        background-color: rgb(240, 240, 240);
+        display: flex;
+        margin: auto;
+       }
+       #footer>div{
+        width: 20%;
+        height: 100%;
+        text-align: left;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        line-height: 2;
+       }
+       #footer>div>a,p{
+        text-decoration: none;
+        text-align: left;
+        color: rgb(121, 121, 121);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+       }
+       #footer>div>h3{
+        text-align: left;
+        color: rgb(87, 87, 87);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       #footer img{
+        width: 6%;
+       }
+       #end{
+        width: 100%;
+        height: 46px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(225, 225, 225);
+        
+       }
+       #end>h4,p{
+        color: rgb(125, 125, 125);
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 15px;
+        margin-right: 15px;
+       }
+
     </style>
 </head>
 <body>
@@ -442,6 +577,105 @@
         <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/collusion-hp-logos-256x256.jpg" alt="">
         <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/stradivarius.png" alt="">
     </div>
+</div>
+<div id="categories">
+<h2>TOP WOMAN'S CATEGORIES</h2>
+<div>
+    <a href="">Wedding Dresses</a>
+    <a href="">Cocktail Dresses</a>
+    <a href="">Woman's Jumpsuits</a>
+    <a href="">Wrap Dresses</a>
+    <a href="">Bodycon Dresses</a>
+    <a href="">Formal Dresses</a>
+    <a href="">Satin Dresses</a>
+    <a href="">Woman's Jumpers</a>
+    <a href="">Woman's Dressing Gowns & Robes</a>
+    <a href="">Skater Dreses</a>
+    <a href="">Woman's Purses</a>
+    <a href="">Denim Dresses</a>
+    <a href="">Woman's Nude Shoes</a>
+    <a href="">Eyebrows</a>
+    <a href="">Woman's Denim Jackets</a>
+    <a href=""> Woman's Makeup Bags & Cases</a>
+    <a href="">Backless Bras</a>
+    <a href="">Blouses</a>
+    <a href="">Shapewear</a>
+    <a href="">Women's Wellies & Wellington Boots</a>
+</div>
+</div>
+<div id="desc">
+    <p>
+        Brrr *checks forecast* cold weather incoming. Time to get toasty with AFRAH, your one-stop destination for women’s fashion (no surprises there). With autumn well under way and winter on the horizon, category is: COSY – and that means we’re serving up this season’s hottest knitwear, with wool-mix cardigans, oversized jumpers and sweater dresses in tonal colour palettes. Trudge through fallen leaves and strut through puddles in knee-high leather boots, ankle styles and lace-up fits guaranteed to keep you dry. First-thing runs in the diary? Don’t let the dark mornings mess with your routine. Layer up in light-reflecting activewear and long-sleeve sports tops to keep on keepin’ on. And for everything Face + Body related, trust hall-of-fame brands like The Ordinary, The INKEY List and CeraVe to switch things up with nourishing moisturisers and plenty of serums, oils and treatments. Glowing skin? Check. Cosy (and stylish) 'fits? Double check. Time to hibernate.
+    </p>
+</div>
+<hr>
+<div id="partners">
+     <div id="social">
+         <img src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-facebook-logo-png-transparent-svg-vector-bie-supply-16.png" alt="">
+         <img src="https://www.citypng.com/public/uploads/small/51608566170pd9mmewquxznr0gdb8f6hfyagrvdjgg7kbdxdnprk7zfijvq2ms4ndpq0g4xcmt1yaxqyogkoctsossi9aqjcgjz7u8ra7vfueyd.png" alt="">
+         <img src="https://thumbs.dreamstime.com/b/rounded-black-white-snapchat-logo-icon-high-resolution-vector-eps-file-175792724.jpg" alt="">
+     </div>
+     <div id="pay">
+         <img src="https://images.asos-media.com/navigation/visa-png" alt="">
+         <img src="https://images.asos-media.com/navigation/mastercard-png" alt="">
+         <img src="https://images.asos-media.com/navigation/pay-pal-png" alt="">
+         <img src="https://images.asos-media.com/navigation/american-express-png" alt="">
+         <img src="https://images.asos-media.com/navigation/visa-electron-png" alt="">
+         <img src="https://images.asos-media.com/navigation/maestro-png" alt="">
+         <img src="https://images.asos-media.com/navigation/apple-pay-png" alt="">
+         <img src="https://images.asos-media.com/navigation/klarna-gb-png" alt="">
+         <img src="https://images.asos-media.com/navigation/afterpay_new-png" alt="">
+     </div>
+</div>
+<div id="footer">
+      <div>
+        <h3>
+            HELP & INFORMATION
+        </h3>
+        <a href="">Help </a>
+        <a href="">Track order</a>
+        <a href="">Delivery & returns</a>
+        <a href="">AFRAH Premier</a>
+        <a href="">10% Student Discount</a>
+        <a href="">Sitemap</a>
+      </div>
+      <div>
+        <h3>
+            ABOUT AFRAH
+        </h3>
+        <a href="">About us</a>
+        <a href="">Careers at AFRAH</a>
+        <a href="">Corporate responsibility</a>
+        <a href="">Investors' site</a>
+        <a href="">Cyber Security</a>
+      </div>
+      <div>
+        <h3>
+            MORE FROM AFRAH
+        </h3>
+        <a href="">Mobile and AFRAH apps</a>
+        <a href="">AFRAH Marketplace</a>
+        <a href="">Gift vouchers</a>
+        <a href="">Black Friday</a>
+        <a href="">Our responsible fashion journey</a>
+        <a href="">AFRAH x Thrift+</a>
+        <a href="">Refer A Friend</a>
+        <a href="">Info for Partners</a>
+      </div>
+      <div>
+        <h3>
+            SHOPPING FROM:
+        </h3>
+        <P>You're in <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" alt=""></P>
+      </div>
+</div>
+<div id="end">
+     <h4>
+        @2023 AFRAH
+     </h4>
+     <p>
+        privacy & Cookies | Ts&Cs | Accessibilty
+     </p>
 </div>
 </body>
 </html>
