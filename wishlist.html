@@ -75,7 +75,6 @@
             margin-left: 27px;
             margin-right: 15px;
         }
-       
         #search-bar>img{
             height: 50%;
             margin-left: 19px;
@@ -429,89 +428,7 @@
       <p>></p>
       <a href="">New In</a>
     </div>
-    <div id="new">
-        <div>
-         <h2>Women's New in</h2>
-         <p>Stay ahead of the game with our ‘New in’ edit, featuring new women’s clothing and the latest fashion trends. From belts to bags and caps to cover-ups, find that finishing touch under all your fave brands. ASOS DESIGN serves bits that are always ready for the ’gram, whether it’s super-chunky sandals or a lovely lil dress – start scrolling for some serious inspo. Browse new clothing from Topshop, River Island and more, or if your evening self-care sesh needs an upgrade, there are plenty of fresh Face + Body products here, too. Smooth skin: coming soon. And if you’re in the running to become CEO of trends, remember to bookmark this tab, cos, the latest fashion changes all the time.</p>
-         <button>View less</button>
-        </div>
-    </div>
-    <div id="button">
-        <button>NEW IN: CLOTHING</button>
-        <button>NEW IN: SHOES</button>
-        <button>NEW IN: ACCESSORIES</button>
-        <button>NEW IN: FACE + BODY</button>
-    </div>
-    <div id="filter">
-         <select name="Sort" id="sort">
-            <option value="">Sort</option>
-            <option value="Recommended">Recommended</option>
-            <option value="What's new">What's new</option>
-            <option value="L2H">Price low to high</option>
-            <option value="H2L">Price high to low</option>
-         </select>
-         <select name="New in Date" id="new in date">
-            <option value="">New in Date</option>
-            <option value="Today">Today</option>
-            <option value="yesterday">Yesterday</option>
-            <option value="last">Last 7 days</option>
-            
-         </select>
-         <select name="Category" id="Category">
-            <option value="">Category</option>
-            <option value="dresses">dresses</option>
-            <option value="top">top</option>
-            <option value="Jeans & trousers">Jeans & trousers</option>
-            <option value="footwear">footwear</option>
-         </select>
-         <select name="Product Type" id="Product type">
-            <option value="">Product Type</option>
-            <option value="Dresses">Dresses</option>
-            <option value="Tops">Tops</option>
-            <option value="Jeans & Trousers">Jeans & Trousers</option>
-            <option value="Footwear">Footwear</option>
-         </select>
-         <select name="Style" id="Style">
-            <option value="">Style</option>
-            <option value="Regular">Regular</option>
-            <option value="Tops">Tops</option>
-            <option value="Oversized">Oversized</option>
-            <option value="Cropped">Cropped</option>
-         </select>
-         <select name="Brand" id="Brand">
-            <option value="">Brand</option>
-            <option value="AFRAH Curve">AFRAH Curve</option>
-            <option value="H&M">H&M</option>
-            <option value="Zara">Zara</option>
-            <option value="Channel">Channel</option>
-         </select>
-         <select name="Colour" id="Colour">
-            <option value="">Colour</option>
-            <option value="Black">Black</option>
-            <option value="Blonde">Blonde</option>
-            <option value="Blue">Blue</option>
-            <option value="Brown">Brown</option>
-         </select>
-         <select name="Body Fit" id="Body Fit">
-            <option value="">Body Fit</option>
-            <option value="Tall">Tall</option>
-            <option value="Petite">Petite</option>
-            <option value="maternity">maternity</option>
-            <option value="main">Main collection</option>
-         </select>
-         <select name="Size" id="Size">
-            <option value="">Size</option>
-            <option value="UK 2">UK 2</option>
-            <option value="UK 3">UK 3</option>
-            <option value="UK 2-5">UK 2-5</option>
-            <option value="UK 3-5">UK 3-5</option>
-         </select>
-         <select name="Price range" id="Price Range">
-            <option value="">Price Range</option>
-            
-         </select>
-
-    </div>
+   
     <div id="mydiv">
         <!-- append data here -->
     </div>
@@ -628,36 +545,7 @@
      });
     }
 
-    const select =document.getElementById("Category") 
- select.addEventListener("change", ()=>{
-    var selectedCategory=select.value;
-    
-    let filterData =data;
-   
-    if(selectedCategory != "Category"){
-        filterData=data.filter(item=>item.category ==selectedCategory);
-    }
-    console.log(filterData)
-    country(filterData)
-   
- })
- const sortt=document.getElementById("sort")
- sortt.addEventListener("change", ()=>{
-    if(sortt.value=="L2H"){
-        data.sort((a,b)=> a.price - b.price);
-        country(data)
-    }else if(sortt.value=="H2L"){
-        data.sort((a,b)=> b.price -a.price)
-        country(data)
-    }else if(sortt.value=="Recommended"){
-        data.sort((a,b)=> b.id - a.id)
-        country(data)
-    }else if(sortt.value=="What's new"){
-        data.sort((a,b)=>a.id - b.id)
-        country(data)
-    } 
-
- })
+ 
 
  
 

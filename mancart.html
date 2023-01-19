@@ -206,6 +206,174 @@
         border-left: none;
         border-right: none;
       }
+      #mydiv{
+        width: 92%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 15px;
+        
+        margin-top: 40px;
+      }
+      #mydiv>div{
+        position: relative;
+      }
+      #mydiv>div>img{
+        width: 100%;
+        
+        
+      }
+      #btn1{
+        position:absolute;
+        top: 68.5%;
+        left: 92%;
+        transform: translate(-50%, -50%);
+        background-image: url(heart.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 30px;
+        width: 30px;
+        border: none;
+        border-radius: 20px;
+      }
+      #btn1:hover{
+        
+        
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        cursor: pointer;
+      }
+      #btn2{
+        position:absolute;
+        top: 92%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        border-radius: 3px;
+        height: 30px;
+        width: 90px;
+        font-size: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: rgb(7, 7, 7);
+        color: white;
+        font-weight: 600;
+        border: none;
+      }
+      #btn2:hover{
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      #mydiv>div>h2{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 8px;
+      }
+      #mydiv>div>p{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+        color: gray;
+        font-weight: bolder;
+        margin-left: 8px;
+      }
+      #mydiv>div{
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        border-radius: 4px;
+      }
+      #partners{
+               margin-top: 100px;
+               width: 80%;
+               height: 55px; 
+               display: flex; 
+               margin: auto;
+              
+       }
+      #social{
+        width: 22%;
+        border-right: 2px solid rgb(189, 189, 189);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+       }
+       #social>img{
+        height: 60%;
+        
+       }
+      #pay{
+        width: 78%;
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       }
+       #pay>img{
+        height: 60%;
+       }
+       #footer{
+        width: 100%;
+        height: 370px;
+        background-color: rgb(240, 240, 240);
+        display: flex;
+        margin: auto;
+       }
+       #footer>div{
+        width: 20%;
+        height: 100%;
+        text-align: left;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        line-height: 2;
+       }
+       #footer>div>a,p{
+        text-decoration: none;
+        text-align: left;
+        color: rgb(121, 121, 121);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+       }
+       #footer>div>h3{
+        text-align: left;
+        color: rgb(87, 87, 87);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       #footer img{
+        width: 6%;
+       }
+       #end{
+        width: 100%;
+        height: 46px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(225, 225, 225);
+        
+       }
+       #end>h4,p{
+        color: rgb(125, 125, 125);
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 15px;
+        margin-right: 15px;
+       }
+       #more{
+        width: 100%;
+        height: 80px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       #more>button{
+        font-size: 20px;
+        margin: auto;
+        border: 2px solid black;
+        background-color: white;
+        border-radius: 5px;
+        font-weight: 400;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
     </style>
 </head>
 <body>
@@ -339,9 +507,175 @@
          </select>
 
     </div>
-    <div id="data">
+    <div id="mydiv">
         <!-- append data here -->
     </div>
-    
+    <div id="more">
+        <button>LOAD MORE>></button>
+    </div>
+    <div id="partners">
+        <div id="social">
+            <img src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-facebook-logo-png-transparent-svg-vector-bie-supply-16.png" alt="">
+            <img src="https://www.citypng.com/public/uploads/small/51608566170pd9mmewquxznr0gdb8f6hfyagrvdjgg7kbdxdnprk7zfijvq2ms4ndpq0g4xcmt1yaxqyogkoctsossi9aqjcgjz7u8ra7vfueyd.png" alt="">
+            <img src="https://thumbs.dreamstime.com/b/rounded-black-white-snapchat-logo-icon-high-resolution-vector-eps-file-175792724.jpg" alt="">
+        </div>
+        <div id="pay">
+            <img src="https://images.asos-media.com/navigation/visa-png" alt="">
+            <img src="https://images.asos-media.com/navigation/mastercard-png" alt="">
+            <img src="https://images.asos-media.com/navigation/pay-pal-png" alt="">
+            <img src="https://images.asos-media.com/navigation/american-express-png" alt="">
+            <img src="https://images.asos-media.com/navigation/visa-electron-png" alt="">
+            <img src="https://images.asos-media.com/navigation/maestro-png" alt="">
+            <img src="https://images.asos-media.com/navigation/apple-pay-png" alt="">
+            <img src="https://images.asos-media.com/navigation/klarna-gb-png" alt="">
+            <img src="https://images.asos-media.com/navigation/afterpay_new-png" alt="">
+        </div>
+   </div>
+   <div id="footer">
+         <div>
+           <h3>
+               HELP & INFORMATION
+           </h3>
+           <a href="">Help </a>
+           <a href="">Track order</a>
+           <a href="">Delivery & returns</a>
+           <a href="">AFRAH Premier</a>
+           <a href="">10% Student Discount</a>
+           <a href="">Sitemap</a>
+         </div>
+         <div>
+           <h3>
+               ABOUT AFRAH
+           </h3>
+           <a href="">About us</a>
+           <a href="">Careers at AFRAH</a>
+           <a href="">Corporate responsibility</a>
+           <a href="">Investors' site</a>
+           <a href="">Cyber Security</a>
+         </div>
+         <div>
+           <h3>
+               MORE FROM AFRAH
+           </h3>
+           <a href="">Mobile and AFRAH apps</a>
+           <a href="">AFRAH Marketplace</a>
+           <a href="">Gift vouchers</a>
+           <a href="">Black Friday</a>
+           <a href="">Our responsible fashion journey</a>
+           <a href="">AFRAH x Thrift+</a>
+           <a href="">Refer A Friend</a>
+           <a href="">Info for Partners</a>
+         </div>
+         <div>
+           <h3>
+               SHOPPING FROM:
+           </h3>
+           <P>You're in <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" alt=""></P>
+         </div>
+   </div>
+   <div id="end">
+        <h4>
+           @2023 AFRAH
+        </h4>
+        <p>
+           privacy & Cookies | Ts&Cs | Accessibilty
+        </p>
+   </div>
+   
 </body>
+
+<script>
+    let data;
+     const url = `https://63c90e4a904f040a96551fd8.mockapi.io/fashion`;
+    fetch(url)
+    .then(response=> response.json())
+    .then(response=>{
+    //   let data=response.data;
+      data=response;
+
+       let container=document.getElementById("mydiv")
+       country(data)
+    function country(fashion){
+      container.innerHTML=""
+     fashion.forEach(function(element, ind){
+      let card=document.createElement("div")
+      let poster=document.createElement("img")
+      poster.src=element.image
+      let titlee=document.createElement("h2")
+      titlee.innerText=element.title
+      let cost=document.createElement("p")
+      cost.innerText="$"+element.price
+      let btn = document.createElement("button")
+      btn.textContent=null;
+      btn.id="btn1"
+
+      let btn2=document.createElement("button")
+      btn2.textContent="Add to cart"
+      btn2.id="btn2"
+     
+
+      container.append(card)
+
+      card.append(poster, titlee, cost, btn, btn2)
+       
+
+
+     });
+    }
+
+    const select =document.getElementById("Category") 
+ select.addEventListener("change", ()=>{
+    var selectedCategory=select.value;
+    
+    let filterData =data;
+   
+    if(selectedCategory != "Category"){
+        filterData=data.filter(item=>item.category ==selectedCategory);
+    }
+    console.log(filterData)
+    country(filterData)
+   
+ })
+ const sortt=document.getElementById("sort")
+ sortt.addEventListener("change", ()=>{
+    if(sortt.value=="L2H"){
+        data.sort((a,b)=> a.price - b.price);
+        country(data)
+    }else if(sortt.value=="H2L"){
+        data.sort((a,b)=> b.price -a.price)
+        country(data)
+    }else if(sortt.value=="Recommended"){
+        data.sort((a,b)=> b.id - a.id)
+        country(data)
+    }else if(sortt.value=="What's new"){
+        data.sort((a,b)=>a.id - b.id)
+        country(data)
+    } 
+
+ })
+
+ 
+
+
+
+
+
+})
+
+.catch(error=>{
+    console.log("error")
+})
+ 
+ 
+
+     
+
+
+
+
+
+
+  
+</script>
+
 </html>
