@@ -165,6 +165,13 @@
         font-weight: 600;
         font-family: futura-pt, sans-serif;
       }
+      #totaldislay{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
       #button{
         width: 100%;
         height: 55px;
@@ -377,6 +384,41 @@
         font-weight: 400;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
        }
+       #totaldisplay{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       }
+       #num{
+        margin-right: 60px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: gray;
+       }
+       #totaldisplay>h2{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
+       }
+       #total{
+        margin-left: 48px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       #cart-total{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: gray;
+        font-weight: bolder;
+       }
+       .tilt{
+        position: relative;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    
+     padding: 0px 10px 0px 10px;
+    height: 100%;
+    transform: skew(-20deg);
+    background-color: rgb(195, 14, 74);
+    
+        }
 
     </style>
 </head>
@@ -391,13 +433,13 @@
         <a href="./index.html">WOMAN</a>
         <a href="./men.html">MEN</a>
         <input type="text" placeholder="     search for items and brands">
-        <img src="profile.png" alt="">
-        <img src="heart.png" alt="">
-        <img src="shoping bag.png" alt="">
+        <img src="profile.png" alt="" id="pro">
+        <img src="heart.png" alt="" id="dil">
+        <img src="shoping bag.png" alt="" id="add">
 
     </div>
     <div id="nav">
-          <a href="">Sale</a>
+          <a href="" class="tilt">Sale</a>
           <a href="">New in</a>
           <a href="">Clothing</a>
           <a href="">Dresses</a>
@@ -409,7 +451,7 @@
           <a href="">Winter</a>
           <a href="">Face + Body</a>
           <a href="">Topshop</a>
-          <a href="">Outlet</a>
+          <a href="" class="tilt">Outlet</a>
           <a href="">Marketplace</a>
     </div>
     <div id="coupen">
@@ -428,12 +470,19 @@
       <p>></p>
       <a href="">New In</a>
     </div>
-   
+   <div id="totaldisplay">
+     <h1 id="total">
+       Total amount: <span id="cart-total">0</span>
+     </h1>
+     <h2>
+      total number of items: <span id="num">0</span>
+     </h2>
+   </div>
     <div id="mydiv">
         <!-- append data here -->
     </div>
     <div id="more">
-        <button>LOAD MORE>></button>
+        
     </div>
     <div id="partners">
         <div id="social">
@@ -507,16 +556,23 @@
 </body>
 
 <script>
-    let data;
-     const url = `https://63c90e4a904f040a96551fd8.mockapi.io/fashion`;
-    fetch(url)
-    .then(response=> response.json())
-    .then(response=>{
-    //   let data=response.data;
-      data=response;
+    // let data;
+    //  const url = `https://63c90e4a904f040a96551fd8.mockapi.io/fashion`;
+    // fetch(url)
+    // .then(response=> response.json())
+    // .then(response=>{
+    // //   let data=response.data;
+    //   data=response;
 
        let container=document.getElementById("mydiv")
-       country(data)
+
+       let cart=JSON.parse(localStorage.getItem("cart"))||[];
+
+       let totalprice=0;
+       let totalpriceEl=document.getElementById("cart-total")
+      let numbers=document.getElementById("num")
+
+       country(cart)
     function country(fashion){
       container.innerHTML=""
      fashion.forEach(function(element, ind){
@@ -532,8 +588,13 @@
       btn.id="btn1"
 
       let btn2=document.createElement("button")
-      btn2.textContent="Add to cart"
+      btn2.textContent="Remove"
       btn2.id="btn2"
+      btn2.addEventListener("click", function(){
+        cart.splice(ind, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        location.reload()
+      })
      
 
       container.append(card)
@@ -541,23 +602,30 @@
       card.append(poster, titlee, cost, btn, btn2)
        
 
-
+      totalprice+=element.price
      });
+     numbers.innerText=cart.length
+     totalpriceEl.innerText=`$${totalprice}`
     }
 
  
-
+document.getElementById("dil").addEventListener("click", function(){
+  window.location.href="./wishlist.html"
+})
+document.getElementById("add").addEventListener("click", function(){
+  window.location.href="./addtocart.html"
+})
  
 
 
 
 
 
-})
+// })
 
-.catch(error=>{
-    console.log("error")
-})
+// .catch(error=>{
+//     console.log("error")
+// })
  
  
 
