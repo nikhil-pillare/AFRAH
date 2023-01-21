@@ -98,11 +98,83 @@
             padding-left: 60px;
             padding-right: 200px;
         }
-        #nav>a{
+        #nav>div>a{
             color: white;
             text-decoration: none;
             font-family: futura-pt, sans-serif;
             font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* padding: 0px 4px 0px 4px; */
+            height: 100%;
+        }
+        #nav>div>a:hover{
+            background-color: white;
+            color: black;
+        }
+        
+       
+        .nav-lvl:hover>.mega-dropdown{
+            display: grid;
+            transition: all 1s ease;
+        }
+        .nav-lvl:hover{
+            border-bottom: 1px solid #003399; 
+            background-color: rgba(0, 0, 0,0.2);
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            
+        }
+       
+        .nav-lvl{
+            
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mega-dropdown{
+        display: grid;
+            grid-template-columns: 0.6fr 0.6fr 0.6fr;
+        display: none;
+    
+        
+
+        border-radius: 5px;
+        width: 92%;
+        left: 4%;
+        top: 85px;
+        position: absolute;
+        z-index: 2;
+        background-color: #ffffff;
+        box-shadow: 3px 3px 30px 8px rgba(0, 0, 0, 0.1);
+        
+        padding-bottom: 20px;
+        margin-top: 50px;
+    
+        }
+        
+        .mega-dropdown>div>img{
+            width: 90%;
+            height: 90%;
+            margin-top: 20px;
+        }
+        .mega-dropdown>div>h2{
+            font-size: 17px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 25px;
+            text-decoration: underline;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .mega-dropdown>div>h4{
+            font-size: 13px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 25px;
+            color: gray;
+            cursor: pointer;
+            
+            
         }
        #coupen{
         width: 100%;
@@ -165,8 +237,31 @@
       #mod>img{
         width: 100%;
         height: 100%;
+        position: relative;
         
       }
+      #mod>button{
+        position: absolute;
+        top: 63%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 42%;
+        height: 7%;
+        background-color: white;
+        font-size: 55px;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       font-weight: bolder;
+       border: none;
+      }
+      #mod>button:hover{
+        color: white;
+        background-color: black;
+        border: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       font-weight: bolder;
+       cursor: pointer;
+      }
+     
       #grid{
         display: grid;
         grid-template-columns: repeat(4,1fr);
@@ -479,21 +574,552 @@
 
     </div>
     <div id="nav">
+        <div class="nav-lvl">
           <a href="" class="tilt">Sale</a>
+          <div class="mega-dropdown">
+
+         <div>
+          <h2>SHOP BY PRODUCT</h2>
+          <h4>SALE Selling fast</h4>
+          <h4>SALE Hoodies & Sweatshirts</h4>
+          <h4>SALE Shoes & Trainers</h4>
+          <h4>SALE T-shirts & Vests</h4>
+          <h4>SALE Jackets & Coats</h4>
+          <h4>SALE Jumpers & cardigans</h4>
+          <h4>SALE Jeans</h4>
+          <h4>SALE Shirts</h4>
+          <h4>SALE Accessories</h4>
+          <h4>SALE Activewear</h4>
+          <h4>SALE Bags</h4>
+         </div>
+         
+         <div>
+          <h4>SALE Gifts</h4>
+          <h4>SALE Jewellery & Watches</h4>
+          <h4>SALE Loungewear</h4>
+          <h4>SALE Polo Shirts</h4>
+          <h4>SALE Shorts</h4>
+          <h4>SALE Suits & Tailoring</h4>
+          <h4>SALE Sunglasses</h4>
+          <h4>SALE Swimwear</h4>
+          <h4>SALE Tracksuits</h4>
+          <h4>SALE Trainers</h4>
+         </div>
+
+         <div>
+          <h2>SHOP BY EDIT</h2>
+          <h4>Sale under $15</h4>
+          <h4>Last chance to buy</h4>
+          <h4>Biggest deal</h4>
+          <h4>Top-saved</h4>
+          <h4>Jeans under $20</h4>
+          <h4>Tailoring under $30</h4>
+          <h4>Sneakerbrands under $30</h4>
+         
+         </div>
+
+
+          </div>
+        </div>
+        <div class="nav-lvl">
           <a href="">New in</a>
+          <div class="mega-dropdown">
+              <div>
+          <h2>NEW PRODUCTS</h2>
+          <H4>Viel all</H4>
+          <H4>Clothing</H4>
+          <H4>Shoes</H4>
+          <H4>Accessories</H4>
+          <H4>face + Body</H4>
+          <H4>Topman</H4>
+          <H4>Back in stock</H4>
+          <H4>Trending now</H4>
+      </div>
+
+         <div>
+          <img src="https://img.freepik.com/free-photo/portrait-sexy-handsome-fashion-male-model-man-dressed-elegant-suit-posing-street-blue-sky_158538-8277.jpg?w=2000" alt="">
+         </div>
+         <div>
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
+         </div>
+      </div>
+        </div>
+        <div class="nav-lvl">
           <a href="">Clothing</a>
+          <div class="mega-dropdown">
+           <div>
+              <h2>SHOP BY PRODUCTS</h2>
+              <h4>New in</h4>
+              <h4>Jackets & coats</h4>
+              <h4>Jumpers & Cardigans</h4>
+              <h4>shirts</h4>
+              <h4>Jeans</h4>
+              <h4>Co-ords</h4>
+              <h4>Designer</h4>
+              <h4>cargo</h4>
+           </div>
+            
+           <div>
+              <h4>Sale under $15</h4>
+          <h4>Last chance to buy</h4>
+          <h4>Biggest deal</h4>
+          <h4>Top-saved</h4>
+          <h4>Jeans under $20</h4>
+          <h4>Tailoring under $30</h4>
+          <h4>Sneakerbrands under $30</h4>
+          <H4>face + Body</H4>
+          <H4>Topman</H4>
+          <H4>Back in stock</H4>
+          <H4>Trending now</H4>
+           </div>
+           
+           <div>
+              <h2>
+                  SHOP BY BODY FIT
+              </h2>
+              <h4>Plus size</h4>
+              <h4>Tall</h4>
+           </div>
+
+          </div>
+        </div>
+        <div class="nav-lvl">
           <a href="">Dresses</a>
+          <div class="mega-dropdown">
+            <div>
+              <h2>
+                WHAT TO WEAR  
+              </h2>
+              <h2>View all</h2>
+              <h2>New in</h2>
+              <h2>Formal dresses</h2>
+              <h2>Party Dresses</h2>
+              <h2>day Dresses</h2>
+              <h2>vacation dreseses</h2>
+              <h2>Winter dreseses</h2>
+              <h2>Bridal Dreseses</h2>
+              <h2>Bridesmaid dreseses</h2>
+            </div>
+
+            <div>
+
+              <h2>FIND YOUR FIT AND LENGTH</h2>
+              <h4>Mini dresses</h4>
+              <h4>Midi dresses</h4>
+              <h4>Maxi dresses</h4>
+              <h4>AFRAH Curve & Plus Size</h4>
+              <h4>maternity</h4>
+              <h4>petite</h4>
+              <h4>Tail</h4>
+            </div>
+          
+            <div>
+              <h2>TRENDING NOW</h2>
+              <h4>sweater dresses</h4>
+              <h4>velvet dresses</h4>
+              <h4>sequin dresses</h4>
+              <h4>white dresses</h4>
+              <h4>LBDs</h4>
+            </div>
+
+          </div>
+        </div>
+        <div class="nav-lvl">
           <a href="">Plus size</a>
+          <div class="mega-dropdown">
+              <div>
+                  <h2>SHOP BY PRODUCTS</h2>
+                  <h4>New in</h4>
+                  <h4>Jackets & coats</h4>
+                  <h4>Jumpers & Cardigans</h4>
+                  <h4>shirts</h4>
+                  <h4>Jeans</h4>
+                  <h4>Co-ords</h4>
+                  <h4>Designer</h4>
+                  <h4>cargo</h4>
+               </div>
+                
+               <div>
+                  <h4>Sale under $15</h4>
+              <h4>Last chance to buy</h4>
+              <h4>Biggest deal</h4>
+              <h4>Top-saved</h4>
+              <h4>Jeans under $20</h4>
+              <h4>Tailoring under $30</h4>
+              <h4>Sneakerbrands under $30</h4>
+              <H4>face + Body</H4>
+              <H4>Topman</H4>
+              <H4>Back in stock</H4>
+              <H4>Trending now</H4>
+               </div>
+               
+               <div>
+                  <h2>
+                      SHOP BY BODY FIT
+                  </h2>
+                  <h4>Plus size</h4>
+                  <h4>Tall</h4>
+               </div>
+          </div>
+        </div>
+        <div class="nav-lvl">
           <a href="">Shoes</a>
+          <div class="mega-dropdown">
+              <div>
+                  <h2>SHOP BY PRODUCT</h2>
+                  <h4>SALE Selling fast</h4>
+                  <h4>SALE Hoodies & Sweatshirts</h4>
+                  <h4>SALE Shoes & Trainers</h4>
+                  <h4>SALE T-shirts & Vests</h4>
+                  <h4>SALE Jackets & Coats</h4>
+                  <h4>SALE Jumpers & cardigans</h4>
+                  <h4>SALE Jeans</h4>
+                  <h4>SALE Shirts</h4>
+                  <h4>SALE Accessories</h4>
+                  <h4>SALE Activewear</h4>
+                  <h4>SALE Bags</h4>
+                 </div>
+                 
+                 <div>
+                  <h4>SALE Gifts</h4>
+                  <h4>SALE Jewellery & Watches</h4>
+                  <h4>SALE Loungewear</h4>
+                  <h4>SALE Polo Shirts</h4>
+                  <h4>SALE Shorts</h4>
+                  <h4>SALE Suits & Tailoring</h4>
+                  <h4>SALE Sunglasses</h4>
+                  <h4>SALE Swimwear</h4>
+                  <h4>SALE Tracksuits</h4>
+                  <h4>SALE Trainers</h4>
+                 </div>
+      
+                 <div>
+                  <h2>SHOP BY EDIT</h2>
+                  <h4>Sale under $15</h4>
+                  <h4>Last chance to buy</h4>
+                  <h4>Biggest deal</h4>
+                  <h4>Top-saved</h4>
+                  <h4>Jeans under $20</h4>
+                  <h4>Tailoring under $30</h4>
+                  <h4>Sneakerbrands under $30</h4>
+                 
+                 </div>
+          </div>
+        </div>
+        <div class="nav-lvl">
           <a href="">Activewear</a>
+          <div class="mega-dropdown">
+              <div>
+                  <h2>SHOP BY PRODUCT</h2>
+                  <h4>SALE Selling fast</h4>
+                  <h4>SALE Hoodies & Sweatshirts</h4>
+                  <h4>SALE Shoes & Trainers</h4>
+                  <h4>SALE T-shirts & Vests</h4>
+                  <h4>SALE Jackets & Coats</h4>
+                  <h4>SALE Jumpers & cardigans</h4>
+                  <h4>SALE Jeans</h4>
+                  <h4>SALE Shirts</h4>
+                  <h4>SALE Accessories</h4>
+                  <h4>SALE Activewear</h4>
+                  <h4>SALE Bags</h4>
+                 </div>
+                 
+                 <div>
+                  <h4>SALE Gifts</h4>
+                  <h4>SALE Jewellery & Watches</h4>
+                  <h4>SALE Loungewear</h4>
+                  <h4>SALE Polo Shirts</h4>
+                  <h4>SALE Shorts</h4>
+                  <h4>SALE Suits & Tailoring</h4>
+                  <h4>SALE Sunglasses</h4>
+                  <h4>SALE Swimwear</h4>
+                  <h4>SALE Tracksuits</h4>
+                  <h4>SALE Trainers</h4>
+                 </div>
+      
+                 <div>
+                  <h2>SHOP BY EDIT</h2>
+                  <h4>Sale under $15</h4>
+                  <h4>Last chance to buy</h4>
+                  <h4>Biggest deal</h4>
+                  <h4>Top-saved</h4>
+                  <h4>Jeans under $20</h4>
+                  <h4>Tailoring under $30</h4>
+                  <h4>Sneakerbrands under $30</h4>
+                 
+                 </div>
+          </div>
+        </div>
+        <div class="nav-lvl">
           <a href="">Brands</a>
+          <div class="mega-dropdown">
+              <div>
+                  <h2>
+                    WHAT TO WEAR  
+                  </h2>
+                  <h2>View all</h2>
+                  <h2>New in</h2>
+                  <h2>Formal dresses</h2>
+                  <h2>Party Dresses</h2>
+                  <h2>day Dresses</h2>
+                  <h2>vacation dreseses</h2>
+                  <h2>Winter dreseses</h2>
+                  <h2>Bridal Dreseses</h2>
+                  <h2>Bridesmaid dreseses</h2>
+                </div>
+  
+                <div>
+  
+                  <h2>FIND YOUR FIT AND LENGTH</h2>
+                  <h4>Mini dresses</h4>
+                  <h4>Midi dresses</h4>
+                  <h4>Maxi dresses</h4>
+                  <h4>AFRAH Curve & Plus Size</h4>
+                  <h4>maternity</h4>
+                  <h4>petite</h4>
+                  <h4>Tail</h4>
+                </div>
+              
+                <div>
+                  <h2>TRENDING NOW</h2>
+                  <h4>sweater dresses</h4>
+                  <h4>velvet dresses</h4>
+                  <h4>sequin dresses</h4>
+                  <h4>white dresses</h4>
+                  <h4>LBDs</h4>
+                </div>
+          </div>
+        </div>
+        <div class="nav-lvl">
           <a href="">Accessories</a>
+          <div class="mega-dropdown">
+              <div>
+                  <h2>
+                    WHAT TO WEAR  
+                  </h2>
+                  <h2>View all</h2>
+                  <h2>New in</h2>
+                  <h2>Formal dresses</h2>
+                  <h2>Party Dresses</h2>
+                  <h2>day Dresses</h2>
+                  <h2>vacation dreseses</h2>
+                  <h2>Winter dreseses</h2>
+                  <h2>Bridal Dreseses</h2>
+                  <h2>Bridesmaid dreseses</h2>
+                </div>
+  
+                <div>
+  
+                  <h2>FIND YOUR FIT AND LENGTH</h2>
+                  <h4>Mini dresses</h4>
+                  <h4>Midi dresses</h4>
+                  <h4>Maxi dresses</h4>
+                  <h4>AFRAH Curve & Plus Size</h4>
+                  <h4>maternity</h4>
+                  <h4>petite</h4>
+                  <h4>Tail</h4>
+                </div>
+              
+                <div>
+                  <h2>TRENDING NOW</h2>
+                  <h4>sweater dresses</h4>
+                  <h4>velvet dresses</h4>
+                  <h4>sequin dresses</h4>
+                  <h4>white dresses</h4>
+                  <h4>LBDs</h4>
+                </div>
+          </div>
+        </div>
+        <div class="nav-lvl">
           <a href="">Winter</a>
+          <div class="mega-dropdown">
+              <div>
+                  <h2>SHOP BY PRODUCTS</h2>
+                  <h4>New in</h4>
+                  <h4>Jackets & coats</h4>
+                  <h4>Jumpers & Cardigans</h4>
+                  <h4>shirts</h4>
+                  <h4>Jeans</h4>
+                  <h4>Co-ords</h4>
+                  <h4>Designer</h4>
+                  <h4>cargo</h4>
+               </div>
+                
+               <div>
+                  <h4>Sale under $15</h4>
+              <h4>Last chance to buy</h4>
+              <h4>Biggest deal</h4>
+              <h4>Top-saved</h4>
+              <h4>Jeans under $20</h4>
+              <h4>Tailoring under $30</h4>
+              <h4>Sneakerbrands under $30</h4>
+              <H4>face + Body</H4>
+              <H4>Topman</H4>
+              <H4>Back in stock</H4>
+              <H4>Trending now</H4>
+               </div>
+               
+               <div>
+                  <h2>
+                      SHOP BY BODY FIT
+                  </h2>
+                  <h4>Plus size</h4>
+                  <h4>Tall</h4>
+               </div>
+  
+          </div>
+        </div>
+        <div class="nav-lvl">
           <a href="">Face + Body</a>
+          <div class="mega-dropdown">
+              <div>
+                  <h2>SHOP BY PRODUCTS</h2>
+                  <h4>New in</h4>
+                  <h4>Jackets & coats</h4>
+                  <h4>Jumpers & Cardigans</h4>
+                  <h4>shirts</h4>
+                  <h4>Jeans</h4>
+                  <h4>Co-ords</h4>
+                  <h4>Designer</h4>
+                  <h4>cargo</h4>
+               </div>
+                
+               <div>
+                  <h4>Sale under $15</h4>
+              <h4>Last chance to buy</h4>
+              <h4>Biggest deal</h4>
+              <h4>Top-saved</h4>
+              <h4>Jeans under $20</h4>
+              <h4>Tailoring under $30</h4>
+              <h4>Sneakerbrands under $30</h4>
+              <H4>face + Body</H4>
+              <H4>Topman</H4>
+              <H4>Back in stock</H4>
+              <H4>Trending now</H4>
+               </div>
+               
+               <div>
+                  <h2>
+                      SHOP BY BODY FIT
+                  </h2>
+                  <h4>Plus size</h4>
+                  <h4>Tall</h4>
+               </div>
+  
+          </div>
+        </div>
+        <div class="nav-lvl">
           <a href="">Topshop</a>
+          <div class="mega-dropdown">
+
+              <div>
+                  <h2>NEW PRODUCTS</h2>
+                  <H4>Viel all</H4>
+                  <H4>Clothing</H4>
+                  <H4>Shoes</H4>
+                  <H4>Accessories</H4>
+                  <H4>face + Body</H4>
+                  <H4>Topman</H4>
+                  <H4>Back in stock</H4>
+                  <H4>Trending now</H4>
+              </div>
+      
+                 <div>
+                  <img src="https://static1.squarespace.com/static/53f0042ce4b0337c7d37f031/5a0253d671c10ba51bd16d17/5a1848f024a694106d3f59ad/1524526611378/1930s-beauty-photography-3.jpg%20width=%22150%22%20height=%2240%22%20%E2%80%9CAtlanta%20fashion%20photographers%E2%80%9D" alt="">
+                 </div>
+                 <div>
+                  <img src="https://media.istockphoto.com/id/1359562499/photo/outdoor-fashion-portrait-of-elegant-woman-wearing-lilac-suit-yellow-sunglasses-holding-trendy.jpg?b=1&s=170667a&w=0&k=20&c=LRMqZQCgreHjaZFUxWlwDGrHpZoJVNAgoxlBDdeWY64=" alt="">
+                 </div>
+          </div>
+        </div>
+        <div class="nav-lvl">
           <a href="" class="tilt">Outlet</a>
+          <div class="mega-dropdown">
+              <div>
+                  <h2>
+                    WHAT TO WEAR  
+                  </h2>
+                  <h2>View all</h2>
+                  <h2>New in</h2>
+                  <h2>Formal dresses</h2>
+                  <h2>Party Dresses</h2>
+                  <h2>day Dresses</h2>
+                  <h2>vacation dreseses</h2>
+                  <h2>Winter dreseses</h2>
+                  <h2>Bridal Dreseses</h2>
+                  <h2>Bridesmaid dreseses</h2>
+                </div>
+  
+                <div>
+  
+                  <h2>FIND YOUR FIT AND LENGTH</h2>
+                  <h4>Mini dresses</h4>
+                  <h4>Midi dresses</h4>
+                  <h4>Maxi dresses</h4>
+                  <h4>AFRAH Curve & Plus Size</h4>
+                  <h4>maternity</h4>
+                  <h4>petite</h4>
+                  <h4>Tail</h4>
+                </div>
+              
+                <div>
+                  <h2>TRENDING NOW</h2>
+                  <h4>sweater dresses</h4>
+                  <h4>velvet dresses</h4>
+                  <h4>sequin dresses</h4>
+                  <h4>white dresses</h4>
+                  <h4>LBDs</h4>
+                </div>
+          </div>
+        </div>
+        <div class="nav-lvl">
           <a href="">Marketplace</a>
-    </div>
+          <div class="mega-dropdown">
+              <div>
+                  <h2>
+                    WHAT TO WEAR  
+                  </h2>
+                  <h2>View all</h2>
+                  <h2>New in</h2>
+                  <h2>Formal dresses</h2>
+                  <h2>Party Dresses</h2>
+                  <h2>day Dresses</h2>
+                  <h2>vacation dreseses</h2>
+                  <h2>Winter dreseses</h2>
+                  <h2>Bridal Dreseses</h2>
+                  <h2>Bridesmaid dreseses</h2>
+                </div>
+  
+                <div>
+  
+                  <h2>FIND YOUR FIT AND LENGTH</h2>
+                  <h4>Mini dresses</h4>
+                  <h4>Midi dresses</h4>
+                  <h4>Maxi dresses</h4>
+                  <h4>AFRAH Curve & Plus Size</h4>
+                  <h4>maternity</h4>
+                  <h4>petite</h4>
+                  <h4>Tail</h4>
+                </div>
+              
+                <div>
+                  <h2>TRENDING NOW</h2>
+                  <h4>sweater dresses</h4>
+                  <h4>velvet dresses</h4>
+                  <h4>sequin dresses</h4>
+                  <h4>white dresses</h4>
+                  <h4>LBDs</h4>
+                </div>
+          </div>
+        </div>
+        
+       
+        
+       
+        
+       
+       
+  </div>
     <div id="coupen">
         <div>
             <a href="./womancart.html">WOMEN</a>
@@ -514,25 +1140,27 @@
    </div>
    <div id="mod">
     <img src="https://digiday.com/wp-content/uploads/sites/3/2017/10/170810_ASOS_shot_15_507.jpg?resize=1030,579" alt="">
+    <button onclick="attach()">Minimal to the Max</button>
+    
    </div>
    <div id="grid">
          <div>
-        <img src="https://content.asos-media.com/-/media/homepages/ww/2023/january/16-prime/moment/ww/ww_global_valentines_date_night_moment_870x1110.jpg" alt="">
+        <img src="https://content.asos-media.com/-/media/homepages/ww/2023/january/16-prime/moment/ww/ww_global_valentines_date_night_moment_870x1110.jpg" alt="" onclick="attach()">
         <h3>DATE NIGHT</h3>
         <P>We're falling for these</P>
          </div>
          <div>
-            <img src="https://content.asos-media.com/-/media/homepages/ww/2023/january/16-prime/moment/ww/ww_global_asos_design_brighter_days_moment_870x1110.jpg" alt="">
+            <img src="https://content.asos-media.com/-/media/homepages/ww/2023/january/16-prime/moment/ww/ww_global_asos_design_brighter_days_moment_870x1110.jpg" alt="" onclick="attach()">
             <h3>DO THE BRIGHT THING</h3>
             <p>Grape vibes</p>
          </div>
          <div>
-            <img src="https://content.asos-media.com/-/media/homepages/ww/2023/january/16-prime/moment/ww/ww_global_asos_edition_brights_moment_870x1110.jpg" alt="">
+            <img src="https://content.asos-media.com/-/media/homepages/ww/2023/january/16-prime/moment/ww/ww_global_asos_edition_brights_moment_870x1110.jpg" alt="" onclick="attach()">
             <h3>COLOUR QUEENS</h3>
             <P>AFRAH EDITION statements</P>
          </div>
          <div>
-            <img src="https://content.asos-media.com/-/media/homepages/ww/2023/january/16-prime/moment/ww/ww_global_too_faced_better_than_sex_chocolate_moment_870x1110.jpg" alt="">
+            <img src="https://content.asos-media.com/-/media/homepages/ww/2023/january/16-prime/moment/ww/ww_global_too_faced_better_than_sex_chocolate_moment_870x1110.jpg" alt="" onclick="attach()">
             <h3>TOO FACED NEWNESS</h3>
             <P>Chocolate Sold</P>
          </div>
@@ -557,13 +1185,13 @@
         <img src="https://images.vs-static.com/QfG8MzDo_PcOpesmigg1wMU_INE=/627x0:2374x2329/1900x0/Zalando_0307_Edit_d14867ffa4/Zalando_0307_Edit_d14867ffa4.jpg" alt="">
         <h2>AFRAH WEEKEND COLLECTIVE</h2>
         <P>Our kinda club</P>
-        <button>Shop The Brand</button>
+        <button onclick="attach()">Shop The Brand</button>
        </div>
        <div>
-        <img src="https://images.vs-static.com/QfG8MzDo_PcOpesmigg1wMU_INE=/627x0:2374x2329/1900x0/Zalando_0307_Edit_d14867ffa4/Zalando_0307_Edit_d14867ffa4.jpg" alt="">
+        <img src="https://assets.vogue.com/photos/5fdbb0bf0545513cfcbc17ad/3:4/w_2250,h_3000,c_limit/VO0121_Collections_01.jpg" alt="">
         <h2>RECLAIMED VINTAGE</h2>
         <P>Matchy-matchy moments</P>
-        <button>Shop The Brand</button>
+        <button onclick="attach()">Shop The Brand</button>
        </div>
        
 </div>
@@ -696,5 +1324,9 @@
 document.getElementById("add").addEventListener("click", function(){
   window.location.href="./addtocart.html"
 })
+
+function attach(){
+    window.location.href="./womancart.html"
+}
 </script>
 </html>
