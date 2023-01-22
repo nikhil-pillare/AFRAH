@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #payment-page{
+            width: 70%;
+            margin: auto;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; 
+
+        }
+        h1{
+            font-size: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+        }
+        #total-amount{
+font-size: 25px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+margin-left: 40px;
+margin-top: 100px;
+        }
+        h2{
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+            
+            margin-top: 50px;
+        }
+        h3{
+            font-size: 26px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+            
+            margin-top: 50px;
+        }
+        #payment-options{
+            margin-left: 40px;
+        }
+        label{
+            font-size: 25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+        input{
+            margin-right: 40px;
+        }
+        #checkout-button{
+            margin-left: 40px;
+            margin-top: 30px;
+            margin-bottom: 80px;
+           
+            font-size: 30px;
+            background-color: black;
+            height: 10%;
+            width: 20%;
+            color: white;
+            font-weight: bolder;        
+        }
+        #card-details{
+            margin-left: 40px;
+            display: flex;
+            flex-direction: column;
+            
+            height: 400px;
+            display: none;
+        }
+        #card-details>label{
+            font-size: 25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+        #card-details>input{
+            width: 50%;
+            height: 8%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="payment-page">
+        <h1>Payment</h1>
+        <div id="total-amount">Total Amount: $<span id="amount"></span></div>
+        <div id="payment-options">
+          <h2>Payment Options</h2>
+          <label for="upi">UPI</label>
+          <input type="radio" id="upi" name="payment" value="upi">
+          <label for="card">Card</label>
+          <input type="radio" id="card" name="payment" value="card">
+        </div>
+        <div id="card-details" >
+          <h3>Card Details</h3>
+          <label for="card-number">Card Number</label><br>
+          <input type="text" id="card-number">
+          <br>
+          <label for="expiry-date">Expiry Date</label><br>
+          <input type="text" id="expiry-date">
+          <br>
+          <label for="cvv">CVV</label><br>
+          <input type="text" id="cvv">
+        </div>
+        <button id="checkout-button" disabled>Checkout</button>
+      </div>
+      
+</body>
+
+<script>
+
+    let totalprice=JSON.parse(localStorage.getItem("totalprice"))||[];
+
+    let totalpriceEl=document.getElementById("amount");
+
+    totalpriceEl.innerText=`${totalprice}`
+
+    const cardOption = document.getElementById("card");
+const cardDetails = document.getElementById("card-details");
+const upiOption = document.getElementById("upi");
+
+cardOption.addEventListener("click", function() {
+  cardDetails.style.display = "block";
+});
+
+upiOption.addEventListener("click", function() {
+  cardDetails.style.display = "none";
+});
+</script>
+
+</html>

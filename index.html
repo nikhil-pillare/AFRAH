@@ -67,13 +67,37 @@
             border-left: 1px solid rgb(49, 47, 47);
            
         }
-        #search-bar>input{
-            width: 54%;
+        #search-bar>form>input{
+            width: 100%;
             border-radius: 20px;
-            height: 60%;
+            height: 100%;
             font-size: 15px;
             border: none;
-            margin-left: 27px;
+           
+        }
+                 
+          /* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+
+          
+          .search-button {
+            
+                    padding: 10px;
+          font-size: 16px;
+          cursor: pointer;
+          margin-left: -40px
+          }
+
+          
+          .search-button i {
+            font-size: 18px;
+            margin: auto;
+          } */
+
+        #search-bar>form{
+          width: 54%;
+          height: 60%;
+          border: none;
+          margin-left: 27px;
             margin-right: 15px;
         }
         #search-bar>img{
@@ -88,6 +112,52 @@
             width: 10%;
            
         }
+        #search-bar>div{
+            height: 52%;
+            margin-left: 19px;
+           
+            width: 29px;
+        }
+        #search-bar>div>img{
+            width: 100%;
+        }
+        
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 230px;
+        
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 2;
+        left: -120px;
+        }
+
+
+        .dropdown-content a {
+        color: rgb(88, 88, 88);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        
+        }
+
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+
+        .dropdown:hover .dropbtn {background-color: #3e8e41;}
        
         #nav{
             height: 50px;
@@ -108,10 +178,12 @@
             align-items: center;
             /* padding: 0px 4px 0px 4px; */
             height: 100%;
+            border: none;
         }
         #nav>div>a:hover{
             background-color: white;
             color: black;
+            border: none;
         }
         
        
@@ -120,9 +192,9 @@
             transition: all 1s ease;
         }
         .nav-lvl:hover{
-            border-bottom: 1px solid #003399; 
-            background-color: rgba(0, 0, 0,0.2);
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            /* border-bottom: 1px solid #003399;  */
+            background-color: white;
+            
             
         }
        
@@ -231,13 +303,13 @@
         margin-top: 30px;
         display: block;
         text-align: center;
-        
+        position: relative;
         margin-left: 2%;
       }
       #mod>img{
         width: 100%;
         height: 100%;
-        position: relative;
+        
         
       }
       #mod>button{
@@ -246,7 +318,7 @@
         left: 50%;
         transform: translate(-50%,-50%);
         width: 42%;
-        height: 7%;
+        height: 12%;
         background-color: white;
         font-size: 55px;
        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -328,11 +400,25 @@
        #slider>p{
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
        }
-       #slider>img{
+       #image-slider{
         width: 80%;
         height: 50%;
         margin-bottom: 90px;
         margin-top: 30px;
+        overflow: hidden;
+        position: relative;
+       }
+       #image-slider img{
+              width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1s;
+       }
+       #image-slider img.show{
+        opacity: 1;
        }
        #slider>button{
         width: 170px;
@@ -553,8 +639,90 @@
     background-color: rgb(195, 14, 74);
     
         }
-       
+       @media screen and (min-width: 300px) and (max-width:800px){
+        #up{
+          display: none;
+        }
+        #search-bar a,input{
+          display: none;
+        }
+        #search-bar{
+          display: flex;
+          justify-content: space-around;
+        
+        }
+        #nav{
+          display: none;
 
+        }
+        #coupen{
+          display: flex;
+          justify-content: space-around;
+        }
+        #coupen>h4{
+          display: none;
+        }
+         #sale{
+          display: flex;
+          flex-direction: column;
+          height: 20%;
+         }
+         #mod{
+          display: none;
+         }
+         #grid{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          width: 90%;
+          gap: 15px;
+          margin: auto;
+          margin-top: 10px;
+         }
+         #minisale{
+          display: none;
+         }
+        #brands>div{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          width: 90%;
+          height: 100%;
+        }
+        #brands>div>img{
+          width: 60%;
+          display: block;
+          margin: auto;
+        }
+        #brands{
+          height: 700px;
+        }
+        #categories{
+          display: none;
+        }
+        #end{
+         display: none;
+        }
+        #footer{
+          display: none;
+        }
+        #pay{
+          display: none;
+        }
+        #desc{
+       height: 550px;
+       }
+       #desc>p{
+        width: 100%;
+        margin: auto;
+       }
+       #social{
+        text-align: center;
+        width: 100%;
+        border: none;
+        
+        
+       }
+       }
+      
     </style>
 </head>
 <body>
@@ -567,8 +735,22 @@
        <img src="afrah.png" alt="logo">
         <a href="./index.html">WOMAN</a>
         <a href="./men.html">MEN</a>
+        <form>
         <input type="text" placeholder="     search for items and brands">
-        <img src="profile.png" alt="" id="pro">
+        
+
+      </form>
+        <div class="dropdown">
+            <img src="profile.png" alt="" id="pro">
+            <div class="dropdown-content">
+               <a href="./signIn.html">My Account</a>
+               <a href="">My Orders</a>
+               <a href="">My Returns</a>
+               <a href="./signIn.html">Sign In</a>
+               <a href="./join.html">Join</a>
+               <a onclick="signOut()" href="">Sign Out</a>
+            </div>
+           </div>
         <img src="heart.png" alt="" id="dil">
         <img src="shoping bag.png" alt="" id="add">
 
@@ -1177,7 +1359,13 @@
 <div id="slider">
       <h4>STYLE FEED</h4>
       <P>Outfit ideas, editor picks, styling inspiration and Face + Body tips</P>
-      <img src="https://content.asos-media.com/-/media/images/articles/women/2023/01/17-tues/thumb_230111165724.jpg?h=300&w=300&hash=0CDB88EF65E91183AB55449764DEE08B" alt="">
+      <div id="image-slider">
+        <img src="https://img.freepik.com/premium-photo/3-hot-asian-models-landscape-wearing-traditional-dress-fashion-shoot_658768-295.jpg?w=2000" alt="">
+        <img src="https://x9x6y4p2.stackpathcdn.com/wp-content/uploads/2014/03/fashion-winter-spring-clothes-models-pexels-generic-city-daylight-diversity-1154861.jpg" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlisA4g1SX4Wyz2_ERlzTOE8H3jIOK3CPECg&usqp=CAU" alt="">
+        <img src="https://hips.hearstapps.com/elleuk.cdnds.net/17/30/4000x2000/landscape-1500905573-models-diversity.jpg?resize=640:*" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYSWvU7gYfMzQDpPAtHEkt7cv9NvLBHI0lug&usqp=CAU" alt="">
+      </div>
       <button>VIEW ALL</button>
 </div>
 <div id="models">
@@ -1328,5 +1516,37 @@ document.getElementById("add").addEventListener("click", function(){
 function attach(){
     window.location.href="./womancart.html"
 }
+
+function signOut() {
+  
+  const storedUser = JSON.parse(localStorage.getItem("user"));
+  
+  if(storedUser){
+    
+    localStorage.removeItem("user");
+  
+    
+    storedUser.loggedIn = false;
+  
+    
+    localStorage.setItem("user", JSON.stringify(storedUser));
+  
+    
+    window.location.href = "signin.html";
+  } else {
+    console.log("No user data found in local storage.")
+  }
+}
+let images = document.getElementById("image-slider").getElementsByTagName("img");
+let current = 0;
+
+function nextImage() {
+  images[current].classList.remove("show");
+  current = (current + 1) % images.length;
+  images[current].classList.add("show");
+  setTimeout(nextImage, 3000);
+}
+
+nextImage();
 </script>
 </html>

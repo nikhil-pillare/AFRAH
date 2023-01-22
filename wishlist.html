@@ -87,6 +87,52 @@
             width: 10%;
            
         }
+        #search-bar>div{
+            height: 52%;
+            margin-left: 19px;
+           
+            width: 29px;
+        }
+        #search-bar>div>img{
+            width: 100%;
+        }
+        
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 230px;
+        
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 2;
+        left: -120px;
+        }
+
+
+        .dropdown-content a {
+        color: rgb(88, 88, 88);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        
+        }
+
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+
+        .dropdown:hover .dropbtn {background-color: #3e8e41;}
        
         #nav{
             height: 50px;
@@ -416,7 +462,16 @@
         <a href="./index.html">WOMAN</a>
         <a href="./men.html">MEN</a>
         <input type="text" placeholder="     search for items and brands">
-        <img src="profile.png" alt="" id="pro">
+        <div class="dropdown">
+          <img src="profile.png" alt="" id="pro">
+          <div class="dropdown-content">
+             <a href="./signIn.html">My Account</a>
+             <a href="">My Orders</a>
+             <a href="">My Returns</a>
+             <a href="./signIn.html">Sign In</a>
+             <a href="./join.html">Join</a>
+          </div>
+         </div>
         <img src="heart.png" alt="" id="dil">
         <img src="shoping bag.png" alt="" id="add">
 

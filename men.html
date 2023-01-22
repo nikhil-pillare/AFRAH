@@ -82,6 +82,12 @@
            
             
         }
+        #search-bar>img:nth-child(1){
+            height: 100%;
+            margin-left: 20px;
+            width: 10%;
+           
+        }
         #search-bar>div{
             height: 52%;
             margin-left: 19px;
@@ -91,12 +97,7 @@
         #search-bar>div>img{
             width: 100%;
         }
-        #search-bar>img:nth-child(1){
-            height: 100%;
-            margin-left: 20px;
-            width: 10%;
-           
-        }
+        
         .dropdown {
         position: relative;
         display: inline-block;
@@ -159,6 +160,13 @@
         #nav>div>a:hover{
             background-color: white;
             color: black;
+            padding: 0px 5px 0px 5px;
+            font-size: 12px;
+            font-family: futura-pt, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
         }
         
        
@@ -167,9 +175,7 @@
             transition: all 1s ease;
         }
         .nav-lvl:hover{
-            border-bottom: 1px solid #003399; 
-            background-color: rgba(0, 0, 0,0.2);
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+           background-color: white;
             
         }
        
@@ -276,7 +282,7 @@
         margin-top: 30px;
         display: block;
         text-align: center;
-        
+        position: relative;
         margin-left: 2%;
       }
       #mod>img{
@@ -289,8 +295,8 @@
         top: 67%;
         left: 50%;
         transform: translate(-50%,-50%);
-        width: 34%;
-        height: 7%;
+        width: 40%;
+        height: 12%;
         background-color: white;
         font-size: 60px;
        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -371,11 +377,26 @@
        #slider>p{
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
        }
-       #slider>img{
+      
+       #image-slider{
         width: 80%;
         height: 50%;
         margin-bottom: 90px;
         margin-top: 30px;
+        overflow: hidden;
+        position: relative;
+       }
+       #image-slider img{
+              width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1s;
+       }
+       #image-slider img.show{
+        opacity: 1;
        }
        #slider>button{
         width: 170px;
@@ -613,11 +634,11 @@
         <div class="dropdown">
          <img src="profile.png" alt="" id="pro">
          <div class="dropdown-content">
-            <a href="">My Account</a>
+            <a href="./signIn.html">My Account</a>
             <a href="">My Orders</a>
             <a href="">My Returns</a>
-            <a href="">Sign In</a>
-            <a href="">Join</a>
+            <a href="./signIn.html">Sign In</a>
+            <a href="./join.html">Join</a>
          </div>
         </div>
         <img src="heart.png" alt="" id="dil">
@@ -1227,7 +1248,12 @@
 <div id="slider">
       <h4>STYLE FEED</h4>
       <P>Outfit ideas, editor picks, styling inspiration and Face + Body tips</P>
-      <img src="https://afroculture.net/wp-content/uploads/2016/10/Kimono-pour-hommes-asos.jpg" alt="">
+      <div id="image-slider">
+        <img src="https://afroculture.net/wp-content/uploads/2016/10/Kimono-pour-hommes-asos.jpg" alt="">
+        <img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_159281926_117506.jpg" alt="">
+        <img src="https://hips.hearstapps.com/bpc.h-cdn.co/assets/17/44/980x490/landscape-1509637956-mens-style-movies.jpg?resize=1200:*" alt="">
+        <img src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fwp-content%2Fblogs.dir%2F6%2Ffiles%2F2021%2F07%2Fvalentino-haute-couture-2021-collection-tw.jpg?w=960&cbr=1&q=90&fit=max" alt="">
+      </div>
       <button>VIEW ALL</button>
 </div>
 <div id="models">
@@ -1377,5 +1403,17 @@ document.getElementById("add").addEventListener("click", function(){
 function attach(){
     window.location.href="./mancart.html"
 }
+
+let images = document.getElementById("image-slider").getElementsByTagName("img");
+let current = 0;
+
+function nextImage() {
+  images[current].classList.remove("show");
+  current = (current + 1) % images.length;
+  images[current].classList.add("show");
+  setTimeout(nextImage, 3000);
+}
+
+nextImage();
 </script>
 </html>
