@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asos</title>
+    <style>
+        body{
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        #up{
+            display: flex;
+            width: 100%;
+            height: 30px;
+            background-color: rgb(233, 233, 233);
+            justify-content: flex-end;
+            align-items: center;
+           
+        }
+        #up>p{
+            color: rgb(86, 86, 86);
+            text-align: right;
+            font-size: 7px;
+            margin-left: 25px;
+            font-family: futura-pt, sans-serif;
+        }
+        #up>img{
+            width: 10px;
+            height: 10px;
+            margin: 0px 25px 0px 20px;
+        }
+        #search-bar{
+            display: flex;
+            
+            align-items: center;
+            height: 55px;
+            
+           background-color: rgb(0, 0, 0);
+           padding-right: 47px;
+           
+        }
+        #search-bar>a:hover{
+            
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(49, 47, 47);
+
+        }
+        #search-bar>a{
+            color: white;
+            display: flex;
+            font-family: futura-pt, sans-serif;
+            text-decoration: none;
+            color: rgb(239, 236, 232);
+            width: 10%;
+            
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid rgb(49, 47, 47);
+            border-left: 1px solid rgb(49, 47, 47);
+           
+        }
+        #search-bar>input{
+            width: 54%;
+            border-radius: 20px;
+            height: 60%;
+            font-size: 15px;
+            border: none;
+            margin-left: 27px;
+            margin-right: 15px;
+        }
+        #search-bar>img{
+            height: 50%;
+            margin-left: 19px;
+            
+           
+            
+        }
+        #search-bar>img:nth-child(1){
+            height: 100%;
+            margin-left: 20px;
+            width: 10%;
+           
+        }
+        #search-bar>div{
+            height: 52%;
+            margin-left: 19px;
+           
+            width: 29px;
+        }
+        #search-bar>div>img{
+            width: 100%;
+        }
+        
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 230px;
+        
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 2;
+        left: -120px;
+        }
+
+
+        .dropdown-content a {
+        color: rgb(88, 88, 88);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        
+        }
+
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+
+        .dropdown:hover .dropbtn {background-color: #3e8e41;}
+       
+        #nav{
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(49, 47, 47);
+            padding-left: 60px;
+            padding-right: 200px;
+        }
+        #nav>div>a{
+            color: white;
+            text-decoration: none;
+            font-family: futura-pt, sans-serif;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* padding: 0px 4px 0px 4px; */
+            height: 100%;
+           
+        
+        }
+        #nav>div>a:hover{
+            background-color: white;
+            color: black;
+            padding: 0px 5px 0px 5px;
+            font-size: 12px;
+            font-family: futura-pt, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        
+       
+        .nav-lvl:hover>.mega-dropdown{
+            display: grid;
+            transition: all 1s ease;
+        }
+        .nav-lvl:hover{
+           background-color: white;
+            
+        }
+       
+        .nav-lvl{
+            
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mega-dropdown{
+        display: grid;
+            grid-template-columns: 0.6fr 0.6fr 0.6fr;
+        display: none;
+    
+        
+
+        border-radius: 5px;
+        width: 92%;
+        left: 4%;
+        top: 85px;
+        position: absolute;
+        z-index: 2;
+        background-color: #ffffff;
+        box-shadow: 3px 3px 30px 8px rgba(0, 0, 0, 0.1);
+        
+        padding-bottom: 20px;
+        margin-top: 50px;
+    
+        }
+        
+        .mega-dropdown>div>img{
+            width: 90%;
+            height: 90%;
+            margin-top: 20px;
+        }
+        .mega-dropdown>div>h2{
+            font-size: 17px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 25px;
+            text-decoration: underline;
+            margin-top: 20px;
+        }
+        .mega-dropdown>div>h4{
+            font-size: 13px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 25px;
+            color: gray;
+            
+            
+        }
+
+        #coupen{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: bisque;
+        font-family: futura-pt, sans-serif;
+       }
+       #coupen>div{
+        border: 3px solid black;
+        width: 80px;
+        margin-left: 25px;
+        margin-right: 25px;
+        display: flex;
+        justify-content: center;
+       }
+       #coupen>div>a{
+        text-decoration: none;
+        font-family: futura-pt, sans-serif;
+        color: black;
+        font-weight: 900;
+       }
+       #sale{
+        width: 100%;
+        height: 150px;
+        background-color: palevioletred;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: futura-pt, sans-serif;
+        border-top: 2px solid white;
+        background-image: linear-gradient(to right,rgb(255,59,95) ,rgb(246,149,180));
+       }
+       #sale>h1,h5{
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 11px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        
+       }
+       #sale>p{
+        margin-top: 6px;
+        margin-bottom: 0px;
+        color: rgb(73, 73, 73);
+       }
+      #mod{
+        width: 96%;
+        height: 550px;
+        margin-top: 30px;
+        display: block;
+        text-align: center;
+        position: relative;
+        margin-left: 2%;
+      }
+      #mod>img{
+        width: 100%;
+        height: 100%;
+        
+      }
+      #mod>button{
+        position: absolute;
+        top: 67%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 40%;
+        height: 12%;
+        background-color: white;
+        font-size: 60px;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       font-weight: bolder;
+       border: none;
+      }
+      #mod>button:hover{
+        color: white;
+        background-color: black;
+        border: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       font-weight: bolder;
+       cursor: pointer;
+      }
+      #grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 26px;
+        width: 96%;
+       
+       margin-top: 50px;
+       text-align: center;
+      justify-content: center;
+      margin-left: 2%;
+      font-family: futura-pt, sans-serif;
+      
+      }
+      #grid>div>img{
+        width: 100%;
+        
+      }
+      #grid>div>p{
+        text-align: center;
+      }
+     
+      #minisale{
+        width: 100%;
+        height: 120px;
+        background-color: rgb(156,240,224);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: futura-pt, sans-serif;
+        margin-top: 50px;
+        
+       
+       }
+       #minisale>h1,h5{
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 11px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        
+       }
+       #minisale>p{
+        margin-top: 6px;
+        margin-bottom: 0px;
+       }
+       #slider{
+        width: 100%;
+        height: 700px;
+        background-color: rgb(156,240,224);
+        display: flex;
+        flex-direction: column;
+       
+        margin-top: 50px;
+        align-items: center;
+        
+
+       }
+       #slider>h4{
+        font-size: 25px;
+        margin-bottom: 2px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       } 
+       #slider>p{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+      
+       #image-slider{
+        width: 80%;
+        height: 50%;
+        margin-bottom: 90px;
+        margin-top: 30px;
+        overflow: hidden;
+        position: relative;
+       }
+       #image-slider img{
+              width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1s;
+       }
+       #image-slider img.show{
+        opacity: 1;
+       }
+       #slider>button{
+        width: 170px;
+        height: 40px;
+        background-color: white;
+        border: none;
+        font-weight: bold;
+        font-size: 20px;
+
+       }
+       #models{
+        width: 90%;
+        margin-left: 5%;
+        display: flex;
+        margin-top: 48px;
+        
+        justify-content: space-between;
+       }
+       #models>div{
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 48%;
+       }
+       #models>div>img{
+        width: 90%;
+        border-top: 11px solid rgb(115, 59, 176);
+        border-left: 11px solid rgb(225, 47, 47);
+        border-right: 11px solid rgb(193, 255, 47);
+        border-bottom: 11px solid palevioletred;
+       }
+       #models>div>button{
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+        background-color: white;
+       }
+       #models>div>p{
+        text-align: center;
+        color: rgb(109, 109, 109);
+        font-weight: 600;
+        font-size: 16px;
+       }
+       #premier{
+        width: 100%;
+        height: 140px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: futura-pt, sans-serif;
+        background-image: linear-gradient(  to right, rgb(144, 49, 228),rgb(71, 227, 110),rgb(236, 43, 117),rgb(77, 224, 224),rgb(143, 95, 220),rgb(215, 25, 139),rgb(255, 255, 10));
+        
+       }
+       #premier>h1,h5{
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 11px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 20px;
+        
+       }
+       #premier>p{
+        margin-top: 6px;
+        margin-bottom: 0px;
+        font-size: 12px;
+       }
+       #brands{
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        margin-top: 50px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       }
+      
+       #brandimg{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        width: 90%;
+        margin-left: 5%;
+        
+       }
+       #brandimg>img{
+        width: 100%;
+       }
+       #categories{
+        width: 100%;
+        height: 300px;
+        margin-top: 80px;
+        
+        margin-bottom: 50px;
+       
+       }
+       #categories>div{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 90%;
+        height: 80%;
+       
+        margin: auto;
+        
+
+       }
+       #categories>h2{
+        text-align: center;
+        font-size: 27px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+       }
+       #categories>div>a{
+        text-decoration: none;
+        font-size: 15px;
+        text-align: left;
+        color: grey;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       #desc{
+        margin-top: 80px;
+        width: 50%;
+        margin: auto;
+        
+        height: 300px;
+        margin-bottom: 40px;
+       }
+       #desc>p{
+        text-align: center;
+       line-height: 1.5;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       color: rgb(105, 105, 105);
+       }
+       #partners{
+               margin-top: 100px;
+               width: 80%;
+               height: 55px; 
+               display: flex; 
+               margin: auto;
+              
+       }
+       #social{
+        width: 22%;
+        border-right: 2px solid rgb(189, 189, 189);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+       }
+       #social>img{
+        height: 60%;
+       }
+       #pay{
+        width: 78%;
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       }
+       #pay>img{
+        height: 60%;
+       }
+       #footer{
+        width: 100%;
+        height: 370px;
+        background-color: rgb(240, 240, 240);
+        display: flex;
+        margin: auto;
+       }
+       #footer>div{
+        width: 20%;
+        height: 100%;
+        text-align: left;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        line-height: 2;
+       }
+       #footer>div>a,p{
+        text-decoration: none;
+        text-align: left;
+        color: rgb(121, 121, 121);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+       }
+       #footer>div>h3{
+        text-align: left;
+        color: rgb(87, 87, 87);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       #footer img{
+        width: 6%;
+       }
+       #end{
+        width: 100%;
+        height: 46px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(225, 225, 225);
+        
+       }
+       #end>h4,p{
+        color: rgb(125, 125, 125);
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 15px;
+        margin-right: 15px;
+       }
+       .tilt{
+        position: relative;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    
+     padding: 0px 10px 0px 10px;
+    height: 100%;
+    transform: skew(-20deg);
+    background-color: rgb(195, 14, 74);
+    
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="up">
+        <p>Marketplace</p>
+        <p>Help & FAQs</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" alt="USAFlag">
+    </div>
+    <div id="search-bar">
+       <img src="afrah.png" alt="logo">
+        <a href="./index.html">WOMAN</a>
+        <a href="./men.html">MEN</a>
+        <input type="text" placeholder="     search for items and brands">
+        <div class="dropdown">
+         <img src="profile.png" alt="" id="pro">
+         <div class="dropdown-content">
+            <a href="./signIn.html">My Account</a>
+            <a href="">My Orders</a>
+            <a href="">My Returns</a>
+            <a href="./signIn.html">Sign In</a>
+            <a href="./join.html">Join</a>
+         </div>
+        </div>
+        <img src="heart.png" alt="" id="dil">
+        <img src="shoping bag.png" alt="" id="add">
+
+    </div>
+    <div id="nav">
+          <div class="nav-lvl">
+            <a href="" class="tilt">Sale</a>
+            <div class="mega-dropdown">
+
+           <div>
+            <h2>SHOP BY PRODUCT</h2>
+            <h4>SALE Selling fast</h4>
+            <h4>SALE Hoodies & Sweatshirts</h4>
+            <h4>SALE Shoes & Trainers</h4>
+            <h4>SALE T-shirts & Vests</h4>
+            <h4>SALE Jackets & Coats</h4>
+            <h4>SALE Jumpers & cardigans</h4>
+            <h4>SALE Jeans</h4>
+            <h4>SALE Shirts</h4>
+            <h4>SALE Accessories</h4>
+            <h4>SALE Activewear</h4>
+            <h4>SALE Bags</h4>
+           </div>
+           
+           <div>
+            <h4>SALE Gifts</h4>
+            <h4>SALE Jewellery & Watches</h4>
+            <h4>SALE Loungewear</h4>
+            <h4>SALE Polo Shirts</h4>
+            <h4>SALE Shorts</h4>
+            <h4>SALE Suits & Tailoring</h4>
+            <h4>SALE Sunglasses</h4>
+            <h4>SALE Swimwear</h4>
+            <h4>SALE Tracksuits</h4>
+            <h4>SALE Trainers</h4>
+           </div>
+
+           <div>
+            <h2>SHOP BY EDIT</h2>
+            <h4>Sale under $15</h4>
+            <h4>Last chance to buy</h4>
+            <h4>Biggest deal</h4>
+            <h4>Top-saved</h4>
+            <h4>Jeans under $20</h4>
+            <h4>Tailoring under $30</h4>
+            <h4>Sneakerbrands under $30</h4>
+           
+           </div>
+
+
+            </div>
+          </div>
+          <div class="nav-lvl">
+            <a href="">New in</a>
+            <div class="mega-dropdown">
+                <div>
+            <h2>NEW PRODUCTS</h2>
+            <H4>Viel all</H4>
+            <H4>Clothing</H4>
+            <H4>Shoes</H4>
+            <H4>Accessories</H4>
+            <H4>face + Body</H4>
+            <H4>Topman</H4>
+            <H4>Back in stock</H4>
+            <H4>Trending now</H4>
+        </div>
+
+           <div>
+            <img src="https://img.freepik.com/free-photo/portrait-sexy-handsome-fashion-male-model-man-dressed-elegant-suit-posing-street-blue-sky_158538-8277.jpg?w=2000" alt="">
+           </div>
+           <div>
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
+           </div>
+        </div>
+          </div>
+          <div class="nav-lvl">
+            <a href="">Clothing</a>
+            <div class="mega-dropdown">
+             <div>
+                <h2>SHOP BY PRODUCTS</h2>
+                <h4>New in</h4>
+                <h4>Jackets & coats</h4>
+                <h4>Jumpers & Cardigans</h4>
+                <h4>shirts</h4>
+                <h4>Jeans</h4>
+                <h4>Co-ords</h4>
+                <h4>Designer</h4>
+                <h4>cargo</h4>
+             </div>
+              
+             <div>
+                <h4>Sale under $15</h4>
+            <h4>Last chance to buy</h4>
+            <h4>Biggest deal</h4>
+            <h4>Top-saved</h4>
+            <h4>Jeans under $20</h4>
+            <h4>Tailoring under $30</h4>
+            <h4>Sneakerbrands under $30</h4>
+            <H4>face + Body</H4>
+            <H4>Topman</H4>
+            <H4>Back in stock</H4>
+            <H4>Trending now</H4>
+             </div>
+             
+             <div>
+                <h2>
+                    SHOP BY BODY FIT
+                </h2>
+                <h4>Plus size</h4>
+                <h4>Tall</h4>
+             </div>
+
+            </div>
+          </div>
+          <div class="nav-lvl">
+            <a href="">Dresses</a>
+            <div class="mega-dropdown">
+              <div>
+                <h2>
+                  WHAT TO WEAR  
+                </h2>
+                <h2>View all</h2>
+                <h2>New in</h2>
+                <h2>Formal dresses</h2>
+                <h2>Party Dresses</h2>
+                <h2>day Dresses</h2>
+                <h2>vacation dreseses</h2>
+                <h2>Winter dreseses</h2>
+                <h2>Bridal Dreseses</h2>
+                <h2>Bridesmaid dreseses</h2>
+              </div>
+
+              <div>
+
+                <h2>FIND YOUR FIT AND LENGTH</h2>
+                <h4>Mini dresses</h4>
+                <h4>Midi dresses</h4>
+                <h4>Maxi dresses</h4>
+                <h4>AFRAH Curve & Plus Size</h4>
+                <h4>maternity</h4>
+                <h4>petite</h4>
+                <h4>Tail</h4>
+              </div>
+            
+              <div>
+                <h2>TRENDING NOW</h2>
+                <h4>sweater dresses</h4>
+                <h4>velvet dresses</h4>
+                <h4>sequin dresses</h4>
+                <h4>white dresses</h4>
+                <h4>LBDs</h4>
+              </div>
+
+            </div>
+          </div>
+          <div class="nav-lvl">
+            <a href="">Plus size</a>
+            <div class="mega-dropdown">
+                <div>
+                    <h2>SHOP BY PRODUCTS</h2>
+                    <h4>New in</h4>
+                    <h4>Jackets & coats</h4>
+                    <h4>Jumpers & Cardigans</h4>
+                    <h4>shirts</h4>
+                    <h4>Jeans</h4>
+                    <h4>Co-ords</h4>
+                    <h4>Designer</h4>
+                    <h4>cargo</h4>
+                 </div>
+                  
+                 <div>
+                    <h4>Sale under $15</h4>
+                <h4>Last chance to buy</h4>
+                <h4>Biggest deal</h4>
+                <h4>Top-saved</h4>
+                <h4>Jeans under $20</h4>
+                <h4>Tailoring under $30</h4>
+                <h4>Sneakerbrands under $30</h4>
+                <H4>face + Body</H4>
+                <H4>Topman</H4>
+                <H4>Back in stock</H4>
+                <H4>Trending now</H4>
+                 </div>
+                 
+                 <div>
+                    <h2>
+                        SHOP BY BODY FIT
+                    </h2>
+                    <h4>Plus size</h4>
+                    <h4>Tall</h4>
+                 </div>
+            </div>
+          </div>
+          <div class="nav-lvl">
+            <a href="">Shoes</a>
+            <div class="mega-dropdown">
+                <div>
+                    <h2>SHOP BY PRODUCT</h2>
+                    <h4>SALE Selling fast</h4>
+                    <h4>SALE Hoodies & Sweatshirts</h4>
+                    <h4>SALE Shoes & Trainers</h4>
+                    <h4>SALE T-shirts & Vests</h4>
+                    <h4>SALE Jackets & Coats</h4>
+                    <h4>SALE Jumpers & cardigans</h4>
+                    <h4>SALE Jeans</h4>
+                    <h4>SALE Shirts</h4>
+                    <h4>SALE Accessories</h4>
+                    <h4>SALE Activewear</h4>
+                    <h4>SALE Bags</h4>
+                   </div>
+                   
+                   <div>
+                    <h4>SALE Gifts</h4>
+                    <h4>SALE Jewellery & Watches</h4>
+                    <h4>SALE Loungewear</h4>
+                    <h4>SALE Polo Shirts</h4>
+                    <h4>SALE Shorts</h4>
+                    <h4>SALE Suits & Tailoring</h4>
+                    <h4>SALE Sunglasses</h4>
+                    <h4>SALE Swimwear</h4>
+                    <h4>SALE Tracksuits</h4>
+                    <h4>SALE Trainers</h4>
+                   </div>
+        
+                   <div>
+                    <h2>SHOP BY EDIT</h2>
+                    <h4>Sale under $15</h4>
+                    <h4>Last chance to buy</h4>
+                    <h4>Biggest deal</h4>
+                    <h4>Top-saved</h4>
+                    <h4>Jeans under $20</h4>
+                    <h4>Tailoring under $30</h4>
+                    <h4>Sneakerbrands under $30</h4>
+                   
+                   </div>
+            </div>
+          </div>
+          <div class="nav-lvl">
+            <a href="">Activewear</a>
+            <div class="mega-dropdown">
+                <div>
+                    <h2>SHOP BY PRODUCT</h2>
+                    <h4>SALE Selling fast</h4>
+                    <h4>SALE Hoodies & Sweatshirts</h4>
+                    <h4>SALE Shoes & Trainers</h4>
+                    <h4>SALE T-shirts & Vests</h4>
+                    <h4>SALE Jackets & Coats</h4>
+                    <h4>SALE Jumpers & cardigans</h4>
+                    <h4>SALE Jeans</h4>
+                    <h4>SALE Shirts</h4>
+                    <h4>SALE Accessories</h4>
+                    <h4>SALE Activewear</h4>
+                    <h4>SALE Bags</h4>
+                   </div>
+                   
+                   <div>
+                    <h4>SALE Gifts</h4>
+                    <h4>SALE Jewellery & Watches</h4>
+                    <h4>SALE Loungewear</h4>
+                    <h4>SALE Polo Shirts</h4>
+                    <h4>SALE Shorts</h4>
+                    <h4>SALE Suits & Tailoring</h4>
+                    <h4>SALE Sunglasses</h4>
+                    <h4>SALE Swimwear</h4>
+                    <h4>SALE Tracksuits</h4>
+                    <h4>SALE Trainers</h4>
+                   </div>
+        
+                   <div>
+                    <h2>SHOP BY EDIT</h2>
+                    <h4>Sale under $15</h4>
+                    <h4>Last chance to buy</h4>
+                    <h4>Biggest deal</h4>
+                    <h4>Top-saved</h4>
+                    <h4>Jeans under $20</h4>
+                    <h4>Tailoring under $30</h4>
+                    <h4>Sneakerbrands under $30</h4>
+                   
+                   </div>
+            </div>
+          </div>
+          <div class="nav-lvl">
+            <a href="">Brands</a>
+            <div class="mega-dropdown">
+                <div>
+                    <h2>
+                      WHAT TO WEAR  
+                    </h2>
+                    <h2>View all</h2>
+                    <h2>New in</h2>
+                    <h2>Formal dresses</h2>
+                    <h2>Party Dresses</h2>
+                    <h2>day Dresses</h2>
+                    <h2>vacation dreseses</h2>
+                    <h2>Winter dreseses</h2>
+                    <h2>Bridal Dreseses</h2>
+                    <h2>Bridesmaid dreseses</h2>
+                  </div>
+    
+                  <div>
+    
+                    <h2>FIND YOUR FIT AND LENGTH</h2>
+                    <h4>Mini dresses</h4>
+                    <h4>Midi dresses</h4>
+                    <h4>Maxi dresses</h4>
+                    <h4>AFRAH Curve & Plus Size</h4>
+                    <h4>maternity</h4>
+                    <h4>petite</h4>
+                    <h4>Tail</h4>
+                  </div>
+                
+                  <div>
+                    <h2>TRENDING NOW</h2>
+                    <h4>sweater dresses</h4>
+                    <h4>velvet dresses</h4>
+                    <h4>sequin dresses</h4>
+                    <h4>white dresses</h4>
+                    <h4>LBDs</h4>
+                  </div>
+            </div>
+          </div>
+          <div class="nav-lvl">
+            <a href="">Accessories</a>
+            <div class="mega-dropdown">
+                <div>
+                    <h2>
+                      WHAT TO WEAR  
+                    </h2>
+                    <h2>View all</h2>
+                    <h2>New in</h2>
+                    <h2>Formal dresses</h2>
+                    <h2>Party Dresses</h2>
+                    <h2>day Dresses</h2>
+                    <h2>vacation dreseses</h2>
+                    <h2>Winter dreseses</h2>
+                    <h2>Bridal Dreseses</h2>
+                    <h2>Bridesmaid dreseses</h2>
+                  </div>
+    
+                  <div>
+    
+                    <h2>FIND YOUR FIT AND LENGTH</h2>
+                    <h4>Mini dresses</h4>
+                    <h4>Midi dresses</h4>
+                    <h4>Maxi dresses</h4>
+                    <h4>AFRAH Curve & Plus Size</h4>
+                    <h4>maternity</h4>
+                    <h4>petite</h4>
+                    <h4>Tail</h4>
+                  </div>
+                
+                  <div>
+                    <h2>TRENDING NOW</h2>
+                    <h4>sweater dresses</h4>
+                    <h4>velvet dresses</h4>
+                    <h4>sequin dresses</h4>
+                    <h4>white dresses</h4>
+                    <h4>LBDs</h4>
+                  </div>
+            </div>
+          </div>
+          <div class="nav-lvl">
+            <a href="">Winter</a>
+            <div class="mega-dropdown">
+                <div>
+                    <h2>SHOP BY PRODUCTS</h2>
+                    <h4>New in</h4>
+                    <h4>Jackets & coats</h4>
+                    <h4>Jumpers & Cardigans</h4>
+                    <h4>shirts</h4>
+                    <h4>Jeans</h4>
+                    <h4>Co-ords</h4>
+                    <h4>Designer</h4>
+                    <h4>cargo</h4>
+                 </div>
+                  
+                 <div>
+                    <h4>Sale under $15</h4>
+                <h4>Last chance to buy</h4>
+                <h4>Biggest deal</h4>
+                <h4>Top-saved</h4>
+                <h4>Jeans under $20</h4>
+                <h4>Tailoring under $30</h4>
+                <h4>Sneakerbrands under $30</h4>
+                <H4>face + Body</H4>
+                <H4>Topman</H4>
+                <H4>Back in stock</H4>
+                <H4>Trending now</H4>
+                 </div>
+                 
+                 <div>
+                    <h2>
+                        SHOP BY BODY FIT
+                    </h2>
+                    <h4>Plus size</h4>
+                    <h4>Tall</h4>
+                 </div>
+    
+            </div>
+          </div>
+          <div class="nav-lvl">
+            <a href="">Face + Body</a>
+            <div class="mega-dropdown">
+                <div>
+                    <h2>SHOP BY PRODUCTS</h2>
+                    <h4>New in</h4>
+                    <h4>Jackets & coats</h4>
+                    <h4>Jumpers & Cardigans</h4>
+                    <h4>shirts</h4>
+                    <h4>Jeans</h4>
+                    <h4>Co-ords</h4>
+                    <h4>Designer</h4>
+                    <h4>cargo</h4>
+                 </div>
+                  
+                 <div>
+                    <h4>Sale under $15</h4>
+                <h4>Last chance to buy</h4>
+                <h4>Biggest deal</h4>
+                <h4>Top-saved</h4>
+                <h4>Jeans under $20</h4>
+                <h4>Tailoring under $30</h4>
+                <h4>Sneakerbrands under $30</h4>
+                <H4>face + Body</H4>
+                <H4>Topman</H4>
+                <H4>Back in stock</H4>
+                <H4>Trending now</H4>
+                 </div>
+                 
+                 <div>
+                    <h2>
+                        SHOP BY BODY FIT
+                    </h2>
+                    <h4>Plus size</h4>
+                    <h4>Tall</h4>
+                 </div>
+    
+            </div>
+          </div>
+          <div class="nav-lvl">
+            <a href="">Topshop</a>
+            <div class="mega-dropdown">
+
+                <div>
+                    <h2>NEW PRODUCTS</h2>
+                    <H4>Viel all</H4>
+                    <H4>Clothing</H4>
+                    <H4>Shoes</H4>
+                    <H4>Accessories</H4>
+                    <H4>face + Body</H4>
+                    <H4>Topman</H4>
+                    <H4>Back in stock</H4>
+                    <H4>Trending now</H4>
+                </div>
+        
+                   <div>
+                    <img src="https://static1.squarespace.com/static/53f0042ce4b0337c7d37f031/5a0253d671c10ba51bd16d17/5a1848f024a694106d3f59ad/1524526611378/1930s-beauty-photography-3.jpg%20width=%22150%22%20height=%2240%22%20%E2%80%9CAtlanta%20fashion%20photographers%E2%80%9D" alt="">
+                   </div>
+                   <div>
+                    <img src="https://media.istockphoto.com/id/1359562499/photo/outdoor-fashion-portrait-of-elegant-woman-wearing-lilac-suit-yellow-sunglasses-holding-trendy.jpg?b=1&s=170667a&w=0&k=20&c=LRMqZQCgreHjaZFUxWlwDGrHpZoJVNAgoxlBDdeWY64=" alt="">
+                   </div>
+            </div>
+          </div>
+          <div class="nav-lvl">
+            <a href="" class="tilt">Outlet</a>
+            <div class="mega-dropdown">
+                <div>
+                    <h2>
+                      WHAT TO WEAR  
+                    </h2>
+                    <h2>View all</h2>
+                    <h2>New in</h2>
+                    <h2>Formal dresses</h2>
+                    <h2>Party Dresses</h2>
+                    <h2>day Dresses</h2>
+                    <h2>vacation dreseses</h2>
+                    <h2>Winter dreseses</h2>
+                    <h2>Bridal Dreseses</h2>
+                    <h2>Bridesmaid dreseses</h2>
+                  </div>
+    
+                  <div>
+    
+                    <h2>FIND YOUR FIT AND LENGTH</h2>
+                    <h4>Mini dresses</h4>
+                    <h4>Midi dresses</h4>
+                    <h4>Maxi dresses</h4>
+                    <h4>AFRAH Curve & Plus Size</h4>
+                    <h4>maternity</h4>
+                    <h4>petite</h4>
+                    <h4>Tail</h4>
+                  </div>
+                
+                  <div>
+                    <h2>TRENDING NOW</h2>
+                    <h4>sweater dresses</h4>
+                    <h4>velvet dresses</h4>
+                    <h4>sequin dresses</h4>
+                    <h4>white dresses</h4>
+                    <h4>LBDs</h4>
+                  </div>
+            </div>
+          </div>
+          <div class="nav-lvl">
+            <a href="">Marketplace</a>
+            <div class="mega-dropdown">
+                <div>
+                    <h2>
+                      WHAT TO WEAR  
+                    </h2>
+                    <h2>View all</h2>
+                    <h2>New in</h2>
+                    <h2>Formal dresses</h2>
+                    <h2>Party Dresses</h2>
+                    <h2>day Dresses</h2>
+                    <h2>vacation dreseses</h2>
+                    <h2>Winter dreseses</h2>
+                    <h2>Bridal Dreseses</h2>
+                    <h2>Bridesmaid dreseses</h2>
+                  </div>
+    
+                  <div>
+    
+                    <h2>FIND YOUR FIT AND LENGTH</h2>
+                    <h4>Mini dresses</h4>
+                    <h4>Midi dresses</h4>
+                    <h4>Maxi dresses</h4>
+                    <h4>AFRAH Curve & Plus Size</h4>
+                    <h4>maternity</h4>
+                    <h4>petite</h4>
+                    <h4>Tail</h4>
+                  </div>
+                
+                  <div>
+                    <h2>TRENDING NOW</h2>
+                    <h4>sweater dresses</h4>
+                    <h4>velvet dresses</h4>
+                    <h4>sequin dresses</h4>
+                    <h4>white dresses</h4>
+                    <h4>LBDs</h4>
+                  </div>
+            </div>
+          </div>
+          
+         
+          
+         
+          
+         
+         
+    </div>
+    <div id="coupen">
+        <div>
+            <a href="./womancart.html">WOMEN</a>
+        </div>
+        <h4>NEW HERE? 15% off* with code: HIFRIEND</h4>
+        <div>
+            <a href="./mancart.html">MEN</a>
+        </div>
+    </div>
+   <div id="sale">
+        <h1>
+            25% OFF WINTER WARMERS!* <br> BRRRRRRRRR
+        </h1>
+        <h5>
+            With code: WARMUP
+        </h5>
+        <P>see website for full T&Cs. Selected market products excluded from promo</P>
+   </div>
+   <div id="mod">
+    <img src="https://fashionista.com/.image/t_share/MTcwNTk5Nzc4Mjk0NDQxMjIy/naadam-fall-campaign-10-lede-3.jpg" alt="">
+    <button onclick="attach">NEUTRAL DRIP</button>
+   </div>
+   <div id="grid">
+         <div>
+        <img src="https://content.asos-media.com/-/media/images/articles/men/2021/03/20-sat/uk-mw-top-picks/pgeimagedisplay-3.jpg?h=1110&w=870&la=en-GB&hash=9323DDCA55E14E7E0C5D8594F67CCB41" alt="" onclick="attach()">
+        <h3>OUTWEAR</h3>
+        <P>Keep it under wraps</P>
+         </div>
+         <div>
+            <img src="https://sourcingjournal.com/wp-content/uploads/2021/03/ASOSdesign.jpg" alt="" onclick="attach()">
+            <h3>V-DAY GOALS</h3>
+            <p>Gifts they'll *love*</p>
+         </div>
+         <div>
+            <img src="https://content.asos-media.com/-/media/images/articles/men/2019/04/10-wed/stylish-guys-in-smart-pieces/style-feed-article-stylish-guys-smart-pieces-04.jpg?h=1110&w=870&la=en-GB&hash=3722EB718743E379C5CFF42ADC910B4E" alt="" onclick="attach()">
+            <h3>TOPMAN</h3>
+            <P>Top fits</P>
+         </div>
+         <div>
+            <img src="https://content.asos-media.com/-/media/images/articles/men/2014/09/4-thurs/how-to-dress-tall-men/style-feed-article-how-to-dress-tall-05.jpg?h=1110&w=870&la=en-GB&hash=7821A45C7F71B08D71EA8212DCE9B95D" alt="" onclick="attach()">
+            <h3>FRED PERRY</h3>
+            <P>Just dropped</P>
+         </div>
+   </div>
+   <div id="minisale">
+    <h1>
+        UP TO 30% OFF FRESH FAVES!
+    </h1>
+    <h5>
+        INCL. DRESSES, TOPS, SHOES & MORE
+    </h5>
+    <P>Limited time only. Selected styles marked down as shown</P>
+</div>
+<div id="slider">
+      <h4>STYLE FEED</h4>
+      <P>Outfit ideas, editor picks, styling inspiration and Face + Body tips</P>
+      <div id="image-slider">
+        <img src="https://afroculture.net/wp-content/uploads/2016/10/Kimono-pour-hommes-asos.jpg" alt="">
+        <img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_159281926_117506.jpg" alt="">
+        <img src="https://hips.hearstapps.com/bpc.h-cdn.co/assets/17/44/980x490/landscape-1509637956-mens-style-movies.jpg?resize=1200:*" alt="">
+        <img src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fwp-content%2Fblogs.dir%2F6%2Ffiles%2F2021%2F07%2Fvalentino-haute-couture-2021-collection-tw.jpg?w=960&cbr=1&q=90&fit=max" alt="">
+      </div>
+      <button>VIEW ALL</button>
+</div>
+<div id="models">
+       <div>
+        <img src="https://content.asos-media.com/-/media/images/articles/men/2019/02/15-fri/nyfw/nyfwss1.jpg?h=1110&w=870&la=en-GB&hash=E3DF9C1B0CEB560F297FC50D8208A06D" alt="">
+        <h2>NEUTRAL DRIP</h2>
+        <P>Low-key steez</P>
+        <button onclick="attach()">SHOP NOW</button>
+       </div>
+       <div>
+        <img src="https://content.asos-media.com/-/media/images/articles/men/2021/03/denim-influencers/straight-2.jpg?h=1100&w=870&la=en-US&hash=BFA9F28240C28BBEABBFC18B63DDFE63" alt="">
+        <h2>NIKE JORDAN</h2>
+        <P>GOAT style</P>
+        <button onclick="attach()">SHOP NOW</button>
+       </div>
+       
+</div>
+<div id="premier">
+    
+        <h1>
+           AFRAH PREMIER
+        </h1>
+        <h5>
+            Unlimited free Next Day Delivery for a whole year for $11.95
+        </h5>
+        <P>Minimum spend and Ts&Cs apply.</P>
+    
+</div>
+<div id="brands">
+    <h2>TRENDING BRANDS</h2>
+    <div id="brandimg">
+        <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/asos-design-logo_256_v4.png" alt="">
+        <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/adidas-hp-logos-256x256.jpg" alt="">
+        <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/1x12x---test.png" alt="">
+        <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/north-face.png" alt="">
+        <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/collusion-hp-logos-256x256.jpg" alt="">
+        <img src="https://content.asos-media.com/-/media/homepages/unisex/brands-logos/256x256/stradivarius.png" alt="">
+    </div>
+</div>
+<div id="categories">
+<h2>TOP MEN'S CATEGORIES</h2>
+<div>
+    <a href="">Men's Suits for Weddings</a>
+    <a href="">Men's Chelsea Boots </a>
+    <a href="">Men's Chinos
+    <a href="">Men's Underwear</a>
+    <a href="">Men's Cardigons</a>
+    <a href="">Men's Harrington Jackets </a>
+    <a href="">Men's Trainer & Invisible socks</a>
+    <a href="">Waistcoats</a>
+    <a href="">3 Piece Suits</a>
+    <a href="">Men's Hiking Boots</a>
+    <a href="">Desert Boots</a>
+    <a href="">Men's Denim Jackets </a>
+    <a href="">Men's Onesies</a>
+    <a href="">Men's Designer Watches</a>
+    <a href="">Men's wash bags</a>
+    <a href="">Men's Ripped Jeans</a>
+    <a href="">Tuxedos</a>
+    <a href="">Chukka Boots</a>
+    <a href="">Men's Denim Shirts</a>
+    <a href="">Men's Baseball Caps</a>
+</div>
+</div>
+<div id="desc">
+    <p>
+        Chilly days ahead – time to layer up. Your one-stop destination for everything men’s fashion, trust ASOS to bring the goods. We’re talking chunky knits, jumpers and cardis in this season’s must-have colour palette, boxy overshirts for a smart-casj vibe, and *the* hottest throw-on jackets and structured coats (think puffers, camel wool dusters and classic trenches, to name a few). Brave the elements in pull-on leather Chelsea boots, rough 'n' ready lace-up worker styles and the perfect low-key sneaks. Finish off your cold-weather 'fits in cosy accessories, with ribbed fisherman beanies, wool-mix scarves and faux-leather gloves as standard. Biting temps playing havoc with your skin? We gotchu. Scroll Face + Body for soothing skincare from top brands like The Ordinary, Bulldog and REN for nourishing products guaranteed to give you back your glow. Winter, we're ready for ya.
+    </p>
+</div>
+<hr>
+<div id="partners">
+     <div id="social">
+         <img src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-facebook-logo-png-transparent-svg-vector-bie-supply-16.png" alt="">
+         <img src="https://www.citypng.com/public/uploads/small/51608566170pd9mmewquxznr0gdb8f6hfyagrvdjgg7kbdxdnprk7zfijvq2ms4ndpq0g4xcmt1yaxqyogkoctsossi9aqjcgjz7u8ra7vfueyd.png" alt="">
+         <img src="https://thumbs.dreamstime.com/b/rounded-black-white-snapchat-logo-icon-high-resolution-vector-eps-file-175792724.jpg" alt="">
+     </div>
+     <div id="pay">
+         <img src="https://images.asos-media.com/navigation/visa-png" alt="">
+         <img src="https://images.asos-media.com/navigation/mastercard-png" alt="">
+         <img src="https://images.asos-media.com/navigation/pay-pal-png" alt="">
+         <img src="https://images.asos-media.com/navigation/american-express-png" alt="">
+         <img src="https://images.asos-media.com/navigation/visa-electron-png" alt="">
+         <img src="https://images.asos-media.com/navigation/maestro-png" alt="">
+         <img src="https://images.asos-media.com/navigation/apple-pay-png" alt="">
+         <img src="https://images.asos-media.com/navigation/klarna-gb-png" alt="">
+         <img src="https://images.asos-media.com/navigation/afterpay_new-png" alt="">
+     </div>
+</div>
+<div id="footer">
+      <div>
+        <h3>
+            HELP & INFORMATION
+        </h3>
+        <a href="">Help </a>
+        <a href="">Track order</a>
+        <a href="">Delivery & returns</a>
+        <a href="">AFRAH Premier</a>
+        <a href="">10% Student Discount</a>
+        <a href="">Sitemap</a>
+      </div>
+      <div>
+        <h3>
+            ABOUT AFRAH
+        </h3>
+        <a href="">About us</a>
+        <a href="">Careers at AFRAH</a>
+        <a href="">Corporate responsibility</a>
+        <a href="">Investors' site</a>
+        <a href="">Cyber Security</a>
+      </div>
+      <div>
+        <h3>
+            MORE FROM AFRAH
+        </h3>
+        <a href="">Mobile and AFRAH apps</a>
+        <a href="">AFRAH Marketplace</a>
+        <a href="">Gift vouchers</a>
+        <a href="">Black Friday</a>
+        <a href="">Our responsible fashion journey</a>
+        <a href="">AFRAH x Thrift+</a>
+        <a href="">Refer A Friend</a>
+        <a href="">Info for Partners</a>
+      </div>
+      <div>
+        <h3>
+            SHOPPING FROM:
+        </h3>
+        <P>You're in <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" alt=""></P>
+      </div>
+</div>
+<div id="end">
+     <h4>
+        @2023 AFRAH
+     </h4>
+     <p>
+        privacy & Cookies | Ts&Cs | Accessibilty
+     </p>
+</div>
+</body>
+<script>
+    document.getElementById("dil").addEventListener("click", function(){
+  window.location.href="./wishlist.html"
+})
+document.getElementById("add").addEventListener("click", function(){
+  window.location.href="./addtocart.html"
+})
+function attach(){
+    window.location.href="./mancart.html"
+}
+
+let images = document.getElementById("image-slider").getElementsByTagName("img");
+let current = 0;
+
+function nextImage() {
+  images[current].classList.remove("show");
+  current = (current + 1) % images.length;
+  images[current].classList.add("show");
+  setTimeout(nextImage, 3000);
+}
+
+nextImage();
+</script>
+</html>

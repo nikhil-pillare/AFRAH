@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        #up{
+            display: flex;
+            width: 100%;
+            height: 30px;
+            background-color: rgb(233, 233, 233);
+            justify-content: flex-end;
+            align-items: center;
+           
+        }
+        #up>p{
+            color: rgb(86, 86, 86);
+            text-align: right;
+            font-size: 7px;
+            margin-left: 25px;
+            font-family: futura-pt, sans-serif;
+        }
+        #up>img{
+            width: 10px;
+            height: 10px;
+            margin: 0px 25px 0px 20px;
+        }
+        #search-bar{
+            display: flex;
+            
+            align-items: center;
+            height: 55px;
+            
+           background-color: rgb(0, 0, 0);
+           padding-right: 47px;
+           
+        }
+        #search-bar>a:hover{
+            
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(49, 47, 47);
+
+        }
+        #search-bar>a{
+            color: white;
+            display: flex;
+            font-family: futura-pt, sans-serif;
+            text-decoration: none;
+            color: rgb(239, 236, 232);
+            width: 10%;
+            
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid rgb(49, 47, 47);
+            border-left: 1px solid rgb(49, 47, 47);
+           
+        }
+        #search-bar>input{
+            width: 54%;
+            border-radius: 20px;
+            height: 60%;
+            font-size: 15px;
+            border: none;
+            margin-left: 27px;
+            margin-right: 15px;
+        }
+        #search-bar>img{
+            height: 50%;
+            margin-left: 19px;
+           
+            
+        }
+        #search-bar>img:nth-child(1){
+            height: 100%;
+            margin-left: 20px;
+            width: 10%;
+           
+        }
+        #search-bar>div{
+            height: 52%;
+            margin-left: 19px;
+           
+            width: 29px;
+        }
+        #search-bar>div>img{
+            width: 100%;
+        }
+        
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 230px;
+        
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 2;
+        left: -120px;
+        }
+
+
+        .dropdown-content a {
+        color: rgb(88, 88, 88);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        
+        }
+
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+
+        .dropdown:hover .dropbtn {background-color: #3e8e41;}
+       
+        #nav{
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(49, 47, 47);
+            padding-left: 60px;
+            padding-right: 200px;
+        }
+        #nav>a{
+            color: white;
+            text-decoration: none;
+            font-family: futura-pt, sans-serif;
+            font-size: 14px;
+        }
+        #coupen{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: bisque;
+        font-family: futura-pt, sans-serif;
+       }
+       #coupen>div{
+        border: 3px solid black;
+        width: 80px;
+        margin-left: 25px;
+        margin-right: 25px;
+        display: flex;
+        justify-content: center;
+       }
+       #coupen>div:hover{
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+       }
+       #coupen>div>a{
+        text-decoration: none;
+        font-family: futura-pt, sans-serif;
+        color: black;
+        font-weight: 900;
+       }
+       #path{
+        width: 100%;
+        height: 57px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+       }
+       #path>a{
+        margin-left: 20px;
+        text-decoration: none;
+        color: black;
+        font-family: futura-pt, sans-serif;
+       }
+       #path>p{
+        margin-left: 10px;
+       }
+       #new{
+        text-align: center;
+        width: 100%;
+        height: 230px;
+        background-color: rgb(244, 243, 243);
+      border: 1px solid whitesmoke;
+        font-family: futura-pt, sans-serif;
+       }
+      #new>div{
+        width: 84%;
+        margin: auto;
+        
+        font-family: futura-pt, sans-serif;
+      }
+      #new>div>button{
+        border: none;
+        font-weight: 600;
+        font-family: futura-pt, sans-serif;
+      }
+      #totaldislay{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #totaldisplay button{
+        margin-right: 60px;
+        height: 40px;
+        width: 130px;
+        font-size: 15px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border-radius: 6px;
+        background-color: black;
+        color: white;
+        font-weight: bolder;
+      }
+      #button{
+        width: 100%;
+        height: 55px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+      }
+      #button>button{
+        height: 60%;
+        width: 15%;
+        border-radius: 20px;
+        background-color: rgb(240, 240, 240);
+        font-family: futura-pt, sans-serif;
+        margin-left: 25px;
+        font-weight: 570;
+        border: none;
+       
+      }
+      #filter{
+       height: 130px;
+        justify-content: space-around;
+        gap: 10px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        margin: auto;
+        background-color: rgb(228, 228, 228);
+      }
+      #filter>select{
+        
+        height: 65%;
+        width: 80%;
+        margin: auto;
+        font-size: 15px;
+        background-color: rgb(228, 228, 228);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgb(105, 105, 105);
+        border-top: 1px solid rgb(188, 188, 188);
+        border-bottom: 0.1px solid rgb(188, 188, 188);
+        border-left: none;
+        border-right: none;
+      }
+      #mydiv{
+        width: 92%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 15px;
+        
+        margin-top: 40px;
+      }
+      #mydiv>div{
+        position: relative;
+      }
+      #mydiv>div>img{
+        width: 100%;
+        
+        
+      }
+      #btn1{
+        position:absolute;
+        top: 68.5%;
+        left: 92%;
+        transform: translate(-50%, -50%);
+        background-image: url(heart.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 30px;
+        width: 30px;
+        border: none;
+        border-radius: 20px;
+      }
+      #btn1:hover{
+        
+        
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        cursor: pointer;
+      }
+      #btn2{
+        position:absolute;
+        top: 92%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        border-radius: 3px;
+        height: 30px;
+        width: 90px;
+        font-size: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: rgb(7, 7, 7);
+        color: white;
+        font-weight: 600;
+        border: none;
+      }
+      #btn2:hover{
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      #mydiv>div>h2{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 8px;
+      }
+      #mydiv>div>p{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+        color: gray;
+        font-weight: bolder;
+        margin-left: 8px;
+      }
+      #mydiv>div{
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        border-radius: 4px;
+      }
+      #partners{
+               margin-top: 100px;
+               width: 80%;
+               height: 55px; 
+               display: flex; 
+               margin: auto;
+              
+       }
+      #social{
+        width: 22%;
+        border-right: 2px solid rgb(189, 189, 189);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+       }
+       #social>img{
+        height: 60%;
+        
+       }
+      #pay{
+        width: 78%;
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       }
+       #pay>img{
+        height: 60%;
+       }
+       #footer{
+        width: 100%;
+        height: 370px;
+        background-color: rgb(240, 240, 240);
+        display: flex;
+        margin: auto;
+       }
+       #footer>div{
+        width: 20%;
+        height: 100%;
+        text-align: left;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        line-height: 2;
+       }
+       #footer>div>a,p{
+        text-decoration: none;
+        text-align: left;
+        color: rgb(121, 121, 121);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+       }
+       #footer>div>h3{
+        text-align: left;
+        color: rgb(87, 87, 87);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       #footer img{
+        width: 6%;
+       }
+       #end{
+        width: 100%;
+        height: 46px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(225, 225, 225);
+        
+       }
+       #end>h4,p{
+        color: rgb(125, 125, 125);
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 15px;
+        margin-right: 15px;
+       }
+       #more{
+        width: 100%;
+        height: 90px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       #more>button{
+        font-size: 20px;
+        padding: 5px 10px 5px 10px;
+        margin: auto;
+        border: 2px solid black;
+        background-color: white;
+        border-radius: 5px;
+        font-weight: 400;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       #totaldisplay{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       }
+       #num{
+        margin-right: 60px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: gray;
+       }
+       #totaldisplay>h2{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
+       }
+       #total{
+        margin-left: 48px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       #cart-total{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: gray;
+        font-weight: bolder;
+       }
+       .tilt{
+        position: relative;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    
+     padding: 0px 10px 0px 10px;
+    height: 100%;
+    transform: skew(-20deg);
+    background-color: rgb(195, 14, 74);
+    
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div id="up">
+        <p>Marketplace</p>
+        <p>Help & FAQs</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" alt="USAFlag">
+    </div>
+    <div id="search-bar">
+       <img src="afrah.png" alt="logo">
+        <a href="./index.html">WOMAN</a>
+        <a href="./men.html">MEN</a>
+        <input type="text" placeholder="     search for items and brands">
+        <div class="dropdown">
+          <img src="profile.png" alt="" id="pro">
+          <div class="dropdown-content">
+             <a href="./signIn.html">My Account</a>
+             <a href="">My Orders</a>
+             <a href="">My Returns</a>
+             <a href="./signIn.html">Sign In</a>
+             <a href="join.html">Join</a>
+          </div>
+         </div>
+        <img src="heart.png" alt="" id="dil">
+        <img src="shoping bag.png" alt="" id="add">
+
+    </div>
+    <div id="nav">
+          <a href="" class="tilt">Sale</a>
+          <a href="">New in</a>
+          <a href="">Clothing</a>
+          <a href="">Dresses</a>
+          <a href="">Plus size</a>
+          <a href="">Shoes</a>
+          <a href="">Activewear</a>
+          <a href="">Brands</a>
+          <a href="">Accessories</a>
+          <a href="">Winter</a>
+          <a href="">Face + Body</a>
+          <a href="">Topshop</a>
+          <a href="" class="tilt">Outlet</a>
+          <a href="">Marketplace</a>
+    </div>
+    <div id="coupen">
+        <div>
+            <a href="">WOMEN</a>
+        </div>
+        <h4>NEW HERE? 15% off* with code: HIFRIEND</h4>
+        <div>
+            <a href="">MEN</a>
+        </div>
+    </div>
+    <div id="path">
+      <a href="">Home</a>
+      <p>></p>
+      <a href="./index.html">Women</a>
+      <p>></p>
+      <a href="">New In</a>
+    </div>
+   <div id="totaldisplay">
+     <h1 id="total">
+       Total amount: <span id="cart-total">0</span>
+     </h1>
+     <h2>
+      total number of items: <span id="num">0</span>
+     </h2>
+     <button id="paym">CHECKOUT</button>
+   </div>
+    <div id="mydiv">
+        <!-- append data here -->
+    </div>
+    <div id="more">
+        
+    </div>
+    <div id="partners">
+        <div id="social">
+            <img src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-facebook-logo-png-transparent-svg-vector-bie-supply-16.png" alt="">
+            <img src="https://www.citypng.com/public/uploads/small/51608566170pd9mmewquxznr0gdb8f6hfyagrvdjgg7kbdxdnprk7zfijvq2ms4ndpq0g4xcmt1yaxqyogkoctsossi9aqjcgjz7u8ra7vfueyd.png" alt="">
+            <img src="https://thumbs.dreamstime.com/b/rounded-black-white-snapchat-logo-icon-high-resolution-vector-eps-file-175792724.jpg" alt="">
+        </div>
+        <div id="pay">
+            <img src="https://images.asos-media.com/navigation/visa-png" alt="">
+            <img src="https://images.asos-media.com/navigation/mastercard-png" alt="">
+            <img src="https://images.asos-media.com/navigation/pay-pal-png" alt="">
+            <img src="https://images.asos-media.com/navigation/american-express-png" alt="">
+            <img src="https://images.asos-media.com/navigation/visa-electron-png" alt="">
+            <img src="https://images.asos-media.com/navigation/maestro-png" alt="">
+            <img src="https://images.asos-media.com/navigation/apple-pay-png" alt="">
+            <img src="https://images.asos-media.com/navigation/klarna-gb-png" alt="">
+            <img src="https://images.asos-media.com/navigation/afterpay_new-png" alt="">
+        </div>
+   </div>
+   <div id="footer">
+         <div>
+           <h3>
+               HELP & INFORMATION
+           </h3>
+           <a href="">Help </a>
+           <a href="">Track order</a>
+           <a href="">Delivery & returns</a>
+           <a href="">AFRAH Premier</a>
+           <a href="">10% Student Discount</a>
+           <a href="">Sitemap</a>
+         </div>
+         <div>
+           <h3>
+               ABOUT AFRAH
+           </h3>
+           <a href="">About us</a>
+           <a href="">Careers at AFRAH</a>
+           <a href="">Corporate responsibility</a>
+           <a href="">Investors' site</a>
+           <a href="">Cyber Security</a>
+         </div>
+         <div>
+           <h3>
+               MORE FROM AFRAH
+           </h3>
+           <a href="">Mobile and AFRAH apps</a>
+           <a href="">AFRAH Marketplace</a>
+           <a href="">Gift vouchers</a>
+           <a href="">Black Friday</a>
+           <a href="">Our responsible fashion journey</a>
+           <a href="">AFRAH x Thrift+</a>
+           <a href="">Refer A Friend</a>
+           <a href="">Info for Partners</a>
+         </div>
+         <div>
+           <h3>
+               SHOPPING FROM:
+           </h3>
+           <P>You're in <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" alt=""></P>
+         </div>
+   </div>
+   <div id="end">
+        <h4>
+           @2023 AFRAH
+        </h4>
+        <p>
+           privacy & Cookies | Ts&Cs | Accessibilty
+        </p>
+   </div>
+   
+</body>
+
+<script>
+    // let data;
+    //  const url = `https://63c90e4a904f040a96551fd8.mockapi.io/fashion`;
+    // fetch(url)
+    // .then(response=> response.json())
+    // .then(response=>{
+    // //   let data=response.data;
+    //   data=response;
+
+       let container=document.getElementById("mydiv")
+
+       let cart=JSON.parse(localStorage.getItem("cart"))||[];
+
+       let totalprice=0;
+       let totalpriceEl=document.getElementById("cart-total")
+      let numbers=document.getElementById("num")
+
+       country(cart)
+    function country(fashion){
+      container.innerHTML=""
+     fashion.forEach(function(element, ind){
+      let card=document.createElement("div")
+      let poster=document.createElement("img")
+      poster.src=element.image
+      let titlee=document.createElement("h2")
+      titlee.innerText=element.title
+      let cost=document.createElement("p")
+      cost.innerText="$"+element.price
+      let btn = document.createElement("button")
+      btn.textContent=null;
+      btn.id="btn1"
+
+      let btn2=document.createElement("button")
+      btn2.textContent="Remove"
+      btn2.id="btn2"
+      btn2.addEventListener("click", function(){
+        cart.splice(ind, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        location.reload()
+      })
+     
+
+      container.append(card)
+
+      card.append(poster, titlee, cost, btn, btn2)
+       
+
+      totalprice+=element.price
+
+      localStorage.setItem("totalprice", JSON.stringify(totalprice))
+     });
+     numbers.innerText=cart.length
+     totalpriceEl.innerText=`$${totalprice}`
+    }
+
+    let checkoutButton = document.getElementById("paym");
+checkoutButton.addEventListener("click", function(){
+  let storedUser = JSON.parse(localStorage.getItem("user"));
+  if (storedUser && storedUser.loggedIn) {
+    window.location.href = "./payment.html";
+  } else {
+    alert("Please sign in to proceed with checkout.");
+  }
+});
+
+
+ 
+document.getElementById("dil").addEventListener("click", function(){
+  window.location.href="./wishlist.html"
+})
+document.getElementById("add").addEventListener("click", function(){
+  window.location.href="./addtocart.html"
+})
+ 
+// function pay(){
+//   window.location.href="./payment.html"
+// }
+
+
+
+
+// })
+
+// .catch(error=>{
+//     console.log("error")
+// })
+ 
+ 
+
+     
+
+
+
+
+
+
+  
+</script>
+</html>
